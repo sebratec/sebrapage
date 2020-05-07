@@ -701,7 +701,7 @@ var Okno = {
                         $btn.addClass('loading');
                         $.ajax({
                             type: 'POST',
-                            url:  'assets/php/contact-form.php',
+                            url:  'https://us-central1-sebratec-academy.cloudfunctions.net/sendMail',
                             data: $form.serialize(),
                             error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
