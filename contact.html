@@ -232,14 +232,16 @@
 <!-- JS Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBrmyWwNouZ7eEgx43bsvVdbXqkX0LLexo"></script>
 	
-<script src="https://www.google.com/recaptcha/api.js?render=6LfR3fMUAAAAAFwhOtoNmUj1D5POv2kBy6kqaWB0"></script>
-<script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LfR3fMUAAAAAFwhOtoNmUj1D5POv2kBy6kqaWB0', { action: 'contact' }).then(function (token) {
-                const recaptchaResponse = document.getElementById('recaptchaResponse');
-                recaptchaResponse.value = token;
-            });
-        });
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
+	
+<script type="text/javascript">
+   const onloadCallback = function() {
+   grecaptcha.render('#recaptchaResponse', {
+      'sitekey' : '6LfR3fMUAAAAAFwhOtoNmUj1D5POv2kBy6kqaWB0'
+       });
+     };
 </script>
 
 </body>
