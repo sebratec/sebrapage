@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-cookies-popup="true">
 <head>
-
+	
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -172,7 +172,7 @@
 							<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
 						</div>
 						
-						<div class="g-recaptcha" data-sitekey="6Lc62PMUAAAAAFZRYQrOFr_nqrOrG1g8zLFyJRNo"></div>
+						<div id="recaptchaResponse" class="g-recaptcha" data-sitekey="6Lc62PMUAAAAAFZRYQrOFr_nqrOrG1g8zLFyJRNo"></div>
 						
 						<div class="row">
 							<div class="col-md-4 col-sm-6">
@@ -231,6 +231,16 @@
 
 <!-- JS Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBrmyWwNouZ7eEgx43bsvVdbXqkX0LLexo"></script>
+	
+<script src="https://www.google.com/recaptcha/api.js?render=6Lc62PMUAAAAAFZRYQrOFr_nqrOrG1g8zLFyJRNo"></script>
+<script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lc62PMUAAAAAFZRYQrOFr_nqrOrG1g8zLFyJRNo', { action: 'contact' }).then(function (token) {
+                const recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });
+</script>
 
 </body>
 
