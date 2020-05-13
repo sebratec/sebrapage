@@ -24,11 +24,11 @@ $(document).ready(function(){
 				clone.querySelector('.content.animated').setAttribute('class', attrClass + ' col-md-push-6');
 			}
 			clone.querySelector('.bg-image').setAttribute('style','background-image: url("' + background + '")');
-			clone.querySelector('.image img').src = "http://localhost:8080/uploads/images/classes/" + course["image"];
+			clone.querySelector('.image img').src = course["image_url"];
 			clone.querySelector('h1').innerHTML = data["name"];
 			clone.querySelector('p.lead').innerHTML = data["subtitle"].substr(0, 150);
 			clone.querySelector('p.description').innerHTML = data["short_description"].substr(0, 150);
-			clone.querySelector('a.btn').href = "http://localhost:8080/home/courses/" + course["id"];
+			clone.querySelector('a.btn').href = course["course_url"];
 			place.parentNode.insertBefore(clone, place.nextSibling);
 		});
 	}).fail(function(jqXHR, textStatus, errorThrown) { alert('getJSON request failed! ' + textStatus); });
