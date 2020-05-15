@@ -1,7 +1,7 @@
 $(document).ready(function(){  
 	var templateElement = document.createRange().createContextualFragment(template);
 	var place = document.querySelector("#courses");
-	var url = "http://academy.sebratec.com/api/courses";
+	var url = "https://academy.sebratec.com/api/courses";
 	$.getJSON(url, function(json) {
 		var result = JSON.parse(json);
 		result.courses.forEach(function (course, i){
