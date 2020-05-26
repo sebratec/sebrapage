@@ -27,7 +27,7 @@ $(document).ready(function(){
 			clone.querySelector('h1').innerHTML = data["name"].toUpperCase();
 			clone.querySelector('h2').innerHTML = data["subtitle"];
 			clone.querySelector('p.description').innerHTML = $('<div/>').html(data["short_description"]).text();
-			// clone.querySelector('a.btn').href = course["course_url"];
+			clone.querySelector('a.btn').href = course["course_url"];
 			place.parentNode.insertBefore(clone, place.nextSibling);
 		});
 	}).fail(function(jqXHR, textStatus, errorThrown) { console.log('courses request failed! ' + textStatus); });
