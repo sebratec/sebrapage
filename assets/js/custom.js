@@ -1,25 +1,25 @@
-$(document).ready(function(){  
-	var templateElement = document.createRange().createContextualFragment(template);
-	var place = document.querySelector("#courses");
-	var url = "https://academy.sebratec.com/api/courses";
+$(document).ready(function(){
+	const templateElement = document.createRange().createContextualFragment(template);
+	const place = document.querySelector("#courses");
+	const url = "https://academy.sebratec.com/api/courses";
 	$.getJSON(url, function(json) {
-		var result = JSON.parse(json);
-		result.courses.forEach(function (course, i){
-			var data = {
+		const result = JSON.parse(json);
+		result.courses.map((course, i) =>{
+			const data = {
 				"name": course["name"] != null ? course['name'] : "",
 				"subtitle": course["subtitle"] != null ? course['subtitle'] : "",
 				"short_description": course["short_description"] != null ? course['short_description'] : "",
 			}
-			var clone = templateElement.cloneNode(true);
+			const clone = templateElement.cloneNode(true);
 			clone.querySelector('section').id = "newcourse"+i;
 			clone.querySelector('h1').innerHTML = course["name"];
-			var idx = i%3+1;
-		    var background = "assets/img/photos/showcase_bg0" + idx + ".jpg";
+			const idx = i%3+1;
+		  const background = "assets/img/photos/showcase_bg0" + idx + ".jpg";
 			if(!(i % 2)) {
-				var attrClass = clone.querySelector('.image.animated').getAttribute('class');
+				let attrClass = clone.querySelector('.image.animated').getAttribute('class');
 				clone.querySelector('.image.animated').setAttribute('class', attrClass + ' col-md-push-6');
 			} else {
-				var attrClass = clone.querySelector('.content.animated').getAttribute('class');
+				let attrClass = clone.querySelector('.content.animated').getAttribute('class');
 				clone.querySelector('.content.animated').setAttribute('class', attrClass + ' col-md-push-6');
 			}
 			clone.querySelector('.bg-image').setAttribute('style','background-image: url("' + background + '")');
@@ -30,5 +30,6 @@ $(document).ready(function(){
 			clone.querySelector('a.btn').href = course["course_url"];
 			place.parentNode.insertBefore(clone, place.nextSibling);
 		});
+    Okno.Basic.animations()
 	}).fail(function(jqXHR, textStatus, errorThrown) { console.log('courses request failed! ' + textStatus); });
 });
