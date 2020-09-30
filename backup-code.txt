@@ -1,0 +1,96 @@
+<!-- Section / Portfolio -->
+	<section id="expertise" class="cover bg-dark">
+		<!-- Works List -->
+	 	<div class="masonry row no-padding">
+			<div class="masonry-sizer col-md-4 col-sm-6 col-xs-12"></div>
+			<div class="masonry-item webdesign col-md-4 col-sm-6 col-xs-12">
+				<!-- Media Item -->
+				<div class="image-box image-hover bg-black text-center">
+					<div class="image">
+						<div class="hover dark">
+							<a href="">
+								<h5 class="mb-0">Cloud Services & IoT</h5>
+								<span class="text-muted"></span>
+							</a>
+						</div>
+						<img src="assets/img/photos/cloud2.jpg" alt="">
+					</div>
+				</div>
+			</div>>
+
+			<div class="masonry-item webdesign col-md-4 col-sm-6 col-xs-12">
+				<!-- Media Item -->
+				<div class="image-box image-hover bg-black text-center">
+					<div class="image">
+						<div class="hover dark">
+							<a href="">
+								<h5 class="mb-0">Software Development</h5>
+								<span class="text-muted">Front & Backend</span>
+							</a>
+						</div>
+						<img src="assets/img/photos/coding-computer.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="masonry-item webdesign col-md-4 col-sm-6 col-xs-12">
+				<!-- Media Item -->
+				<div class="image-box image-hover bg-black text-center">
+					<div class="image">
+						<div class="hover dark">
+							<a href="">
+								<h5 class="mb-0">AI & Machine Learning</h5>
+								<span class="text-muted"></span>
+							</a>
+						</div>
+						<img src="assets/img/photos/artificial-intelligence.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="masonry-item webdesign col-md-4 col-sm-6 col-xs-12">
+				<!-- Media Item -->
+				<div class="image-box image-hover bg-black text-center">
+					<div class="image">
+						<div class="hover dark">
+							<a href="">
+								<h5 class="mb-0">Research & Development</h5>
+								<span class="text-muted"></span>
+							</a>
+						</div>
+						<img src="assets/img/photos/rnd.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="masonry-item webdesign col-md-4 col-sm-6 col-xs-12">
+				<!-- Media Item -->
+				<div class="image-box image-hover bg-black text-center">
+					<div class="image">
+						<div class="hover dark">
+							<a href="">
+								<h5 class="mb-0">Embedded Systems</h5>
+								<span class="text-muted"></span>
+							</a>
+						</div>
+						<img src="assets/img/photos/elec_layout.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="masonry-item webdesign col-md-4 col-sm-6 col-xs-12">
+				<!-- Media Item -->
+				<div class="image-box image-hover bg-black text-center">
+					<div class="image">
+						<div class="hover dark">
+							<a href="">
+								<h5 class="mb-0">Testing & Validation</h5>
+								<span class="text-muted">Software & Hardware</span>
+							</a>
+						</div>
+						<img src="assets/img/photos/test.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
