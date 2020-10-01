@@ -1,0 +1,34 @@
+{
+  "name": "Sebratec Blog",
+  "short_name": "Sebratec Blog",
+  "start_url": "https://www.blog.sebratec.com",
+  "display": "standalone",
+  "theme_color": "#FA4616",
+  "background_color": "#FA4616",
+  "description": "Articles and Thoughts about the future of technology. Provided by Sebratec AB.",
+  "icons": [{
+    "src": "assets/img/icons/48p.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "assets/img/icons/72p.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "assets/img/icons/96p.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "assets/img/icons/144p.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "assets/img/icons/168p.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "assets/img/icons/192p.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+}
