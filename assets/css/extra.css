@@ -16,6 +16,18 @@
 	margin-right: 10px;
 }
 
+.CompVis {
+	background: linear-gradient(to bottom left, #c9e05c, #64a74a) !important;
+}
+
+.DeepLearning {
+	background: linear-gradient(to bottom left, #cb6e35, #c45b2e) !important;
+}
+
+.DeployModel {
+	background: linear-gradient(to bottom left, #2e2e2e,#0e0e0e) !important;
+}
+
 @media screen and (max-width: 990px) {
 	.the-logo {
 		position: absolute;
