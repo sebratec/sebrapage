@@ -28,6 +28,13 @@
 	background: linear-gradient(to bottom left, #2e2e2e,#0e0e0e) !important;
 }
 
+.OrangeBullet {
+	float: none;
+	border: 1px solid #666;
+	padding: 10px 15px;
+	border-radius: 40px;
+}
+
 @media screen and (max-width: 990px) {
 	.the-logo {
 		position: absolute;
