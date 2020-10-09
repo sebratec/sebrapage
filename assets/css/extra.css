@@ -4,6 +4,16 @@
 	margin-top: 8px;
 }
 
+#contact-cards {
+	padding: 0px;
+	margin-bottom: 32px;
+}
+
+.form-group > #message {
+	min-width: 230px;
+	min-height: 200px;
+}
+
 #footer {
     float: left;
     width: 100%;
