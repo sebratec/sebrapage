@@ -15,7 +15,6 @@ var $html = $('html');
 var $body = $('body');
 
 // Language selection trigger
-
 $('.language > ul > li > ul > li > a').on('click', (event) => {
     event.preventDefault();
     const selectedLang = $(event.target).html()
@@ -24,7 +23,6 @@ $('.language > ul > li > ul > li > a').on('click', (event) => {
 })
 
 // Default Language selection
-
 const localStorage = window.localStorage
 let userLanguage = localStorage.getItem('userLanguage')
 
