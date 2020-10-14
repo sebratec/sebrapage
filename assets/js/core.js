@@ -14,6 +14,57 @@ Author:         Suelo
 var $html = $('html');
 var $body = $('body');
 
+// Language selection trigger
+
+$('.language > ul > li > ul > li > a').on('click', (event) => {
+    event.preventDefault();
+    const selectedLang = $(event.target).html()
+    localStorage.setItem('userLanguage', selectedLang)
+    window.location.href = $(event.target).attr('href')
+})
+
+// Default Language selection
+
+const localStorage = window.localStorage
+let userLanguage = localStorage.getItem('userLanguage')
+
+let lang = window.navigator.languages ? window.navigator.languages[0] : null;
+lang = lang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+
+let shortLang = lang;
+if (shortLang.indexOf('-') !== -1)
+    shortLang = shortLang.split('-')[0];
+
+if (shortLang.indexOf('_') !== -1)
+    shortLang = shortLang.split('_')[0];
+
+const possibleLangs = { "pt": { "suffix": "BR", "fullName": "Português" }, 
+                        "sv": { "suffix": "SE", "fullName": "Svenska" },
+                        "en": { "suffix": "", "fullName": "English" }};
+
+ // If no language is selected, use browser language. If unsupported, use english.
+if (userLanguage === null) {
+    const selectedLang = !possibleLangs.hasOwnProperty(shortLang)
+                        ? "English"
+                        : possibleLangs[shortLang].fullName
+    localStorage.setItem('userLanguage', selectedLang);
+
+    // update user language after setting it up.
+    userLanguage = localStorage.getItem('userLanguage')
+}
+
+ // Redirect the user to the correct URL if necessary.
+$('.language * a').map((index, element) => {
+    const elementLanguage = $(element).html()
+    const elementRedirectURL = $(element).attr('href')
+    console.log($(element))
+    if (elementLanguage === userLanguage){
+        window.location.href = elementRedirectURL
+    }
+})
+
+
+
 /* Header Function */
 
 var $header = $('#header'),
