@@ -45,6 +45,7 @@ if (userLanguage === null) {
     const selectedLang = !possibleLangs.hasOwnProperty(shortLang)
                         ? "English"
                         : possibleLangs[shortLang].fullName
+                        
     localStorage.setItem('userLanguage', selectedLang);
 
     // update user language after setting it up.
@@ -55,7 +56,6 @@ if (userLanguage === null) {
 $('.language * a').map((index, element) => {
     const elementLanguage = $(element).html()
     const elementRedirectURL = $(element).attr('href')
-    console.log($(element))
     if (elementLanguage === userLanguage){
         window.location.href = elementRedirectURL
     }
