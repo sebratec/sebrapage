@@ -40,10 +40,17 @@
 
 .OrangeBullet {
 	float: none;
-	border: 1px solid #666;
+	border: 1px solid #fa4616;
+	color: #fa4616;
 	padding: 10px 15px;
 	border-radius: 40px;
 }
+
+.OrangeBullet:hover {
+	background: #fa4616;
+	color: #FFFFFF;
+}
+
 
 @media screen and (max-width: 990px) {
 	.the-logo {
