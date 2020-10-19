@@ -62,7 +62,6 @@ $('.language * a').map((index, element) => {
 })
 
 // include hubspot tracking script
-
 const imported = document.createElement('script');
 imported.src = '//js.hs-scripts.com/8334217.js';
 imported.id = "hs-script-loader"
