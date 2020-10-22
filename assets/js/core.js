@@ -67,11 +67,6 @@ $('.language * a').map((index, element) => {
     }
 })
 
-// remove .html extension for the url if needed
-const link = window.location.href
-if(link.includes('.html'))
-    window.history.replaceState(null, null, link.split(".html")[0]);
-
 // include hubspot tracking script
 const imported = document.createElement('script');
 imported.src = '//js.hs-scripts.com/8334217.js';
