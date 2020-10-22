@@ -19,7 +19,13 @@ $('.language > ul > li > ul > li > a').on('click', (event) => {
     event.preventDefault();
     const selectedLang = $(event.target).html()
     localStorage.setItem('userLanguage', selectedLang)
-    window.location.href = $(event.target).attr('href')
+    window.location.href = $(event.target).attr('href').split(".html")[0];
+})
+
+// Remove .html extension from the main navigation links
+$('#nav-primary > li > a').on('click', (event) => {
+    event.preventDefault();
+    window.location.href = $(event.target).attr("href").split(".html")[0];
 })
 
 // Default Language selection
@@ -55,11 +61,16 @@ if (userLanguage === null) {
  // Redirect the user to the correct URL if necessary.
 $('.language * a').map((index, element) => {
     const elementLanguage = $(element).html()
-    const elementRedirectURL = $(element).attr('href')
+    const elementRedirectURL = $(element).attr('href').split(".html")[0];
     if (elementLanguage === userLanguage){
         window.location.href = elementRedirectURL
     }
 })
+
+// remove .html extension for the url if needed
+const link = window.location.href
+if(link.includes('.html'))
+    window.history.replaceState(null, null, link.split(".html")[0]);
 
 // include hubspot tracking script
 const imported = document.createElement('script');
