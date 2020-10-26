@@ -90,15 +90,15 @@
 			</div>
 
 			<!-- Language Menu -->
-			<div class="module language left">
+			<div class="module language right" id="LangBar">
 				<ul class="nav nav-primary">
 					<li class="has-dropdown">
 						<a style="opacity: 1" href="#">
 							<img src="assets/img/flags/bra.png" alt="Português" class="flag" style="width: 32px;">
 						</a>
 						<ul>
-                            <li><a href="index.html">English</a></li>
-                            <li><a href="indexSE.html">Svenska</a></li>
+							<li><a href="index.html">English</a></li>
+							<li><a href="indexSE.html">Svenska</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -106,7 +106,6 @@
 		</nav>
 
 		<!-- Mobile menu -->
-
 		<div  class="menu-toggle">
 		 <a href="" data-toggle="mobile-menu" class="mobile-trigger" ><span><span></span></span></a>
 		</div>
@@ -120,7 +119,13 @@
 	<!-- Section / Slideshow -->
 	<section id="home" class="fullheight dark bg-black">
 
-		<div class="bg-image zooming"><img src="assets/img/backgrounds/opt3v3.webp" alt="Computador com códigos de programação"></div>
+		<div class="bg-image zooming">
+			<picture>
+				<source srcset="assets/img/backgrounds/opt3v3.webp" type="image/webp">
+				<source srcset="assets/img/backgrounds/opt3v3.jpg" type="image/jpeg"> 
+				<img src="assets/img/backgrounds/opt3v3.jpg" alt="Computer with programming codes">
+			</picture>
+		</div>
 
 		<div class="v-center text-center">
 			<!--<span class="icon icon-lg icon-primary"><span class="ti-mouse-alt"></span></span>-->

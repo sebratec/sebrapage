@@ -91,7 +91,7 @@
 			</div>
 
 			<!-- Language Menu -->
-			<div class="module language left">
+			<div class="module language left" style="display: block">
 				<ul class="nav nav-primary">
 					<li class="has-dropdown">
 						<a style="opacity: 1" href="#">
@@ -121,7 +121,13 @@
 	<!-- Section / Slideshow -->
 	<section id="home" class="fullheight dark bg-black">
 
-		<div class="bg-image zooming"><img src="assets/img/backgrounds/opt3v3.webp" alt="Computer with programming codes"></div>
+		<div class="bg-image zooming">
+			<picture>
+				<source srcset="assets/img/backgrounds/opt3v3.webp" type="image/webp">
+				<source srcset="assets/img/backgrounds/opt3v3.jpg" type="image/jpeg"> 
+				<img src="assets/img/backgrounds/opt3v3.jpg" alt="Computer with programming codes">
+			</picture>
+		</div>
 
 		<div class="v-center text-center">
 			<!--<span class="icon icon-lg icon-primary"><span class="ti-mouse-alt"></span></span>-->

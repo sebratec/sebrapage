@@ -4,6 +4,15 @@
 	margin-top: 8px;
 }
 
+#LangBar {
+	position: relative;
+	width: 83px !important;
+}
+
+#LangBar > ul {
+	width: 100%;
+}
+
 #contact-cards {
 	padding: 0px;
 	margin-bottom: 32px;
@@ -50,7 +59,6 @@
 	background: #fa4616;
 	color: #FFFFFF;
 }
-
 
 @media screen and (max-width: 990px) {
 	.the-logo {
