@@ -1,0 +1,6 @@
+user-agent: *
+
+Disallow:
+Allow: 
+
+Sitemap: 

@@ -5,6 +5,7 @@
 }
 
 #LangBar {
+	display: block !important;
 	position: relative;
 	width: 83px !important;
 }
