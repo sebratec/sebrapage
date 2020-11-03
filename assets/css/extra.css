@@ -61,6 +61,87 @@
 	color: #FFFFFF;
 }
 
+/* LANGUAGE SELECT STYLES */
+.Lang {
+	position: relative;
+	float: right;
+	width: auto;
+	height: auto;
+}
+
+.Lang > #LangTrigger {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	padding: 7px;
+	border: none;
+	border-radius: 5px;
+	background: #FFF;
+	cursor: pointer;
+	outline: none;
+}
+
+.Lang > #LangSelect {
+	position: absolute;
+	right: 20px;
+	top: 65px;
+	width: 170px;
+	height: auto;
+	border-radius: 5px;
+	background: #FFF;
+	padding: 10px;
+	-webkit-box-shadow: 0 0 20px 5px rgba(0,0,0,0.13);
+	box-shadow: 0 0 20px 5px rgba(0,0,0,0.13);
+	display: none;
+}
+
+.LangOption {
+	float: left;
+	width: calc(100% - 20px);
+	height: auto;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 4px;
+}
+
+.LangOption > .title {
+	float: left;
+	width: 100px;
+	margin-top: 9px;
+	font-size: 16px;
+	color: #333;
+}
+
+.LangOption > small {
+	float: left;
+	display: none;
+	font-size: 12px;
+	margin-top: 1px;
+	color: #777;
+}
+
+#LangSelect > a > .active {
+	background-color: #DDD;
+}
+
+#LangSelect > a > .active > .title {
+	margin-top: 3px;
+}
+
+#LangSelect > a > .active > small {
+	display: block;
+}
+
+.flag {
+	width: 32px;
+	height: 32px;
+}
+
+.LangOption > img {
+	float: left;
+	margin-right: 10px;
+}
+
 @media screen and (max-width: 990px) {
 	.the-logo {
 		position: absolute;

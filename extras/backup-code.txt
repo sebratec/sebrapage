@@ -94,3 +94,22 @@
 			</div>
 		</div>
 	</section>
+
+
+
+
+	LANGUAGE CHANGER (OLD)
+
+	<div class="module language right" id="LangBar">
+		<ul class="nav nav-primary">
+			<li class="has-dropdown">
+				<a style="opacity: 1" href="#">
+					<img src="assets/img/flags/eur.png" alt="English" class="flag" style="width: 32px;">
+				</a>
+				<ul>
+					<li><a href="indexSE.html">Svenska</a></li>
+					<li><a href="indexBR.html">Português</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>

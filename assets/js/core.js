@@ -22,11 +22,11 @@ $('.language > ul > li > ul > li > a').on('click', (event) => {
     window.location.href = $(event.target).attr("href").replace(".html", "");
 })
 
-// Remove .html extension from the main navigation links
-$('#nav-primary > li > a').on('click', (event) => {
-    event.preventDefault();
-    window.location.href = $(event.target).attr("href").replace(".html", "");
-})
+// // Remove .html extension from the main navigation links
+// $('#nav-primary > li > a').on('click', (event) => {
+//     event.preventDefault();
+//     window.location.href = $(event.target).attr("href").replace(".html", "");
+// })
 
 // Default Language selection
 const localStorage = window.localStorage
