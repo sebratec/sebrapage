@@ -70,26 +70,42 @@
 					<li><a href="contactBR.html">Contato</a></li>
 				</ul>
 			</div>
-
-			<!-- Language Menu -->
-			<div class="module language left">
-				<ul class="nav nav-primary">
-					<li class="has-dropdown">
-						<a style="opacity: 1" href="#">
-							<img src="assets/img/flags/bra.png" alt="Português" class="flag" style="width: 32px;">
-						</a>
-						<ul>
-                            <li><a href="academy.html">English</a></li>
-                            <li><a href="academySE.html">Svenska</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
 		</nav>
 
 		<!-- Menu Toggle -->
 		<div class="menu-toggle">
 			<a href="#" data-toggle="mobile-menu" class="mobile-trigger"><span><span></span></span></a>
+		</div>
+
+		<!-- Language menu -->
+		<div class="Lang">
+			<button id="LangTrigger">
+				<img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
+			</button>
+			
+			<div id="LangSelect">
+				<a href="academy.html" class="LangLink">
+					<div class="LangOption">
+						<img src="https://sebratec.com/assets/img/flags/eur.png" alt="English" class="flag">
+						<p>English</p>
+						<small>In use</small>
+					</div>
+				</a>
+				<a href="academySE.html" class="LangLink">
+					<div class="LangOption">
+						<img src="https://sebratec.com/assets/img/flags/swe.png" alt="Svenska" class="flag">
+						<p>Svenska</p>
+						<small>Aktiv</small>
+					</div>
+				</a>
+				<a href="academyBR.html" class="LangLink">
+					<div class="LangOption active">
+						<img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
+						<p>Português</p>
+						<small>Ativo</small>
+					</div>
+				</a>
+			</div>
 		</div>
 
 	</div>
@@ -269,6 +285,7 @@ var template = `
 
 <!-- JS Core -->
 <script src="assets/js/core-min.js"></script>
+<script src="assets/js/extras.js"></script>
 <script src="assets/js/custom.js"></script>
 </body>
 </html>

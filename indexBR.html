@@ -88,19 +88,35 @@
 					<li><a href="contactBR.html">Contato</a></li>
 				</ul>
 
-				<!-- Language Menu -->
-				<div class="module language right" id="LangBar">
-					<ul class="nav nav-primary">
-						<li class="has-dropdown">
-							<a style="opacity: 1" href="#">
-								<img src="assets/img/flags/bra.png" alt="Português" class="flag" style="width: 32px;">
-							</a>
-							<ul>
-								<li><a href="index.html">English</a></li>
-								<li><a href="indexSE.html">Svenska</a></li>
-							</ul>
-						</li>
-					</ul>
+				<!-- Language menu -->
+				<div class="Lang">
+					<button id="LangTrigger">
+						<img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
+					</button>
+					
+					<div id="LangSelect">
+						<a href="index.html" class="LangLink">
+							<div class="LangOption">
+								<img src="https://sebratec.com/assets/img/flags/eur.png" alt="English" class="flag">
+								<p>English</p>
+								<small>In use</small>
+							</div>
+						</a>
+						<a href="indexSE.html" class="LangLink">
+							<div class="LangOption">
+								<img src="https://sebratec.com/assets/img/flags/swe.png" alt="Svenska" class="flag">
+								<p>Svenska</p>
+								<small>Aktiv</small>
+							</div>
+						</a>
+						<a href="indexBR.html" class="LangLink">
+							<div class="LangOption active">
+								<img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
+								<p>Português</p>
+								<small>Ativo</small>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -410,6 +426,7 @@
 
 <!-- JS Core -->
 <script src="assets/js/core-min.js"></script>
+<script src="assets/js/extras.js"></script>
 
 </body>
 
