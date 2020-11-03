@@ -4,16 +4,6 @@
 	margin-top: 8px;
 }
 
-#LangBar {
-	display: block !important;
-	position: relative;
-	width: 83px !important;
-}
-
-#LangBar > ul {
-	width: 100%;
-}
-
 #contact-cards {
 	padding: 0px;
 	margin-bottom: 32px;
@@ -65,7 +55,7 @@
 .Lang {
 	position: relative;
 	float: right;
-	width: auto;
+	width: 200px;
 	height: auto;
 }
 
