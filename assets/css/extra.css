@@ -56,13 +56,13 @@
 	position: relative;
 	float: right;
 	width: 200px;
-	height: auto;
+	height: 68px;
 }
 
 .Lang > #LangTrigger {
 	position: absolute;
 	right: 20px;
-	top: 20px;
+	top: 0px;
 	padding: 7px;
 	border: none;
 	border-radius: 5px;
@@ -94,7 +94,7 @@
 	border-radius: 4px;
 }
 
-.LangOption > .title {
+.LangOption > p {
 	float: left;
 	width: 100px;
 	margin-top: 9px;
@@ -114,7 +114,7 @@
 	background-color: #DDD;
 }
 
-#LangSelect > a > .active > .title {
+#LangSelect > a > .active > p {
 	margin-top: 3px;
 }
 
