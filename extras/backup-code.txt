@@ -113,3 +113,68 @@
 			</li>
 		</ul>
 	</div>
+
+
+
+		<!-- Section / Services -->
+	<section id="services" class="bg-grey">
+		<div class="container">
+			<h5 class="mb-60">Our Services</h5>
+			<div class="row">
+				<div class="col-md-4">
+					<!-- Service -->
+					<div class="feature feature-3 animated" data-animation="fadeIn">
+						<img src="assets/img/elements/consultancy.png" alt="Consultancy">
+						<div class="feature-content text-center bg-white">
+							<h6 class="mb-5 text-muted text-uppercase">What do you need?</h6>
+							<h5>On-site Consulting</h5>
+							<p class="mb-0">• Research & Development<br>
+							• Software Testing & Validation<br>
+							• Test Automation<br>
+							• Front & Backend Development<br>
+							• Project Management<br>
+							• PLM<br>
+							& more.
+							<br><br>
+							<a href="contact.html"><strong><u>Talk to us!</u></strong></a>
+						</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<!-- Service -->
+					<div class="feature feature-3 animated" data-animation="fadeIn" data-animation-delay="300">
+						<img src="assets/img/elements/customer-solutions.png" alt="Customer Solutions">
+						<div class="feature-content text-center bg-white">
+							<h6 class="mb-5 text-muted text-uppercase">Why Us?</h6>
+							<h5>Customer Driven Solutions</h5>
+							<p class="mb-0">Just tell us your needs and we will engage our team of experts to work on the most suitable solution.<br><br>
+							Innovative thinking and agile deployment. This is our trademark.<br><br>
+
+							<a href="contact.html"><strong><u>Talk to us!</u></strong></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<!-- Service -->
+					<div class="feature feature-3 animated" data-animation="fadeIn" data-animation-delay="600">
+						<img src="assets/img/elements/academy.png" alt="Academy">
+						<div class="feature-content text-center bg-white">
+							<h6 class="mb-5 text-muted text-uppercase">Looking for education?</h6>
+							<h5>Join the Sebratec Academy</h5>
+							<p class="mb-0">
+                                Empowering people with advanced technology knowledge!
+                                <br>
+                                <br>
+                                Courses about AI & Machine Learning, Big Data, 
+                                IoT, Connectivity, Cyber Security, Augmented Reality...
+                                <br>
+                                <br>
+                                <a href="academy.html"><strong><u>More details</u></strong></a>
+                            </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
