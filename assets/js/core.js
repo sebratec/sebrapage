@@ -34,24 +34,6 @@ $('.language > ul > li > ul > li > a').on('click', (event) => {
     window.location.href = $(event.target).attr("href").replace(".html", "");
 })
 
-require(['scripts/config'], function() {
-    // Configuration loaded now, safe to do other require calls
-    // that depend on that config.
-    require(['foo'], function(foo) {
-
-    });
-});
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src=""></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R6Z74XDZ3E');
-</script>
-
 // // Remove .html extension from the main navigation links
 // $('#nav-primary > li > a').on('click', (event) => {
 //     event.preventDefault();
