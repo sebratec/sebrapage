@@ -14,6 +14,18 @@ Author:         Suelo
 var $html = $('html');
 var $body = $('body');
 
+// Google analytics code
+const script = document.createElement('script');
+script.onload = function () {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R6Z74XDZ3E');
+};
+
+script.src = "https://www.googletagmanager.com/gtag/js?id=G-R6Z74XDZ3E";
+document.head.appendChild(script); 
+
 // Language selection trigger
 $('.language > ul > li > ul > li > a').on('click', (event) => {
     event.preventDefault();
@@ -21,6 +33,24 @@ $('.language > ul > li > ul > li > a').on('click', (event) => {
     localStorage.setItem('userLanguage', selectedLang)
     window.location.href = $(event.target).attr("href").replace(".html", "");
 })
+
+require(['scripts/config'], function() {
+    // Configuration loaded now, safe to do other require calls
+    // that depend on that config.
+    require(['foo'], function(foo) {
+
+    });
+});
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src=""></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R6Z74XDZ3E');
+</script>
 
 // // Remove .html extension from the main navigation links
 // $('#nav-primary > li > a').on('click', (event) => {
