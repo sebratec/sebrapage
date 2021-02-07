@@ -14,6 +14,18 @@ Author:         Suelo
 var $html = $('html');
 var $body = $('body');
 
+// Google analytics code
+const script = document.createElement('script');
+script.onload = function () {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R6Z74XDZ3E');
+};
+
+script.src = "https://www.googletagmanager.com/gtag/js?id=G-R6Z74XDZ3E";
+document.head.appendChild(script); 
+
 // Language selection trigger
 $('.language > ul > li > ul > li > a').on('click', (event) => {
     event.preventDefault();
