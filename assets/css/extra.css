@@ -1,3 +1,7 @@
+.menu-toggle {
+	padding-left: 17px !important;
+}
+
 .the-logo {
 	width: 100px;
 	height: 50px;
@@ -62,7 +66,7 @@
 
 .Lang > #LangTrigger {
 	position: absolute;
-	right: 8px;
+	right: 15px;
 	top: 17px;
 	padding: 0px 7px;
 	border: none;
@@ -149,10 +153,10 @@
 	width: 100%;
 	height: auto;
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
 	justify-content: space-between;
-	align-items: stretch;
 }
 
 .ServiceFrame > .holder {
@@ -189,9 +193,200 @@
 	font-size: 15px;
 }
 
-@media screen and (max-width: 990px) {
+/* - - - - - - - - - - - - */
+/* CSS DO SLIDER - ACADEMY */
+/* - - - - - - - - - - - - */
+.slider {
+	position: relative;
+	width: 100vw;
+	height: 530px;
+	background: #000000; 
+}
+
+.slider .active {
+	background-color: #FFF !important;
+}
+
+.counterDesk {
+	position: absolute;
+	width: 68px;
+	height: auto;
+	left: 0px;
+	right: 0px;
+	bottom: 15px;
+	padding: 10px;
+	background: rgba(110, 110, 110, 0.32);
+	border-radius: 35px;
+	margin: auto;
+	z-index: 5;
+}
+
+.counterDesk .counter {
+	outline: none;
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 3px;
+	padding: 0px;
+	border: none;
+	border-radius: 100%;
+	background-color: rgba(30, 30, 30, 0.2);
+	cursor: pointer;
+}
+
+.slider .image1, .slider .image2, .slider .image3 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: 3;
+	user-select: none;
+	background-position: center;
+	background-size: cover;
+}
+
+.slider .image2 {
+	z-index: 2;
+}
+
+.slider .image3 {
+	z-index: 1;
+}
+
+/* Define your images here! */
+.image1 {
+	background-image: url(../img/photos/coding-0.jpg);
+}
+
+.image2 {
+	background-image: url(https://images.unsplash.com/photo-1534858451586-ed7af114f1fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f841935725641bac7421c22e8923cd50&auto=format&fit=crop&w=1050&q=80);
+}
+
+.image3 {
+	background-image: url(https://static.pexels.com/photos/574071/pexels-photo-574071.jpeg);
+}
+
+.image1 .img-1 {
+	position: absolute;
+	width: 350px;
+  	height: 120px;
+	left: 13%;
+	top: 170px;
+}
+
+footer {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 64px;
+	background-color: #000;
+}
+
+footer > .wrapper {
+	position: absolute;
+	width: 1000px;
+	height: 100%;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+}
+
+footer > .wrapper > img {
+	float: left;
+	width: auto;
+	height: 60px;
+	margin-top: 2px;
+	margin-right: 20px;
+	pointer-events: none;
+}
+
+footer > .wrapper > #credits {
+	float: left;
+	color: #FFF;
+	margin-top: 21px;
+	margin-bottom: 0px;
+	font-size: 14px;
+}
+
+footer > .wrapper > .SocialWrapper {
+	float: right;
+	width: 128px;
+	height: 100%;
+}
+
+footer > .wrapper > .SocialWrapper > a {
+	cursor: pointer;
+}
+
+footer > .wrapper > .SocialWrapper > a > svg {
+	float: right;
+	width: 28px;
+	height: 28px;
+	margin-left: 10px;
+	margin-top: 18px;
+	fill: #FFF;
+	transition: all 0.1s ease-in-out;
+}
+
+footer > .wrapper > .SocialWrapper > a:hover > svg {
+	fill: rgb(241, 103, 11);
+}
+
+/* -------------------------------- */
+@media screen and (min-width: 760px) {
+	.nav-primary {
+		margin-right: 30px;
+	}
+}
+
+@media screen and (max-width: 991px) {
 	.the-logo {
 		position: absolute;
 		left: calc(50% - 50px);
+	}
+
+	.ServiceFrame {
+		width: auto;
+		max-width: 680px;
+		justify-content: flex-start;
+		flex-wrap: wrap;	
+	}
+
+	footer {
+		height: 210px;
+	}
+
+	footer > .wrapper {
+		width: 95%;
+		margin: 0px 2.5%;
+	}
+
+	footer > .wrapper > img {
+		float: left;
+		width: 80px;
+		height: auto;
+		margin: 0px calc(50% - 40px);
+	}
+	
+	footer > .wrapper > #credits {
+		width: 100%;
+		margin-top: 16px;
+		font-size: 14px;
+		text-align: center;
+	}
+	
+	footer > .wrapper > .SocialWrapper {
+		height: 64px;
+		margin: 10px calc(50% - 64px);
+	}
+	
+	footer > .wrapper > .SocialWrapper > a {
+		cursor: pointer;
+	}
+	
+	footer > .wrapper > .SocialWrapper > a > svg {
+		width: 32px;
+		height: 32px;
 	}
 }

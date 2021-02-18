@@ -1,0 +1,537 @@
+section {
+    float: left;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    clear: both;
+    overflow: visible !important;
+    padding: 30px 0px !important;
+}
+
+.summary {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    margin: 50px calc(50% - 500px);
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.17);
+}
+
+.bg1 {
+    background-image: url(../img/photos/comewithme.jpg);
+}
+
+.bg2 {
+    background-image: url(../img/photos/compvisio5.jpg);
+}
+
+.bg3 {
+    background-image: url(../img/photos/coding-1.jpg);
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.33);
+}
+
+.overlay > .CourseName {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF;
+}
+
+.overlay > .TeacherName {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 12px 0px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0.67;
+    color: #FFF;
+}
+
+.rating {
+    float: left;
+    width: 130px;
+    height: auto;
+    margin-left: calc(50% - 65px);
+}
+
+.rating > svg {
+    float: left;
+    width: 24px;
+    height: 24px;
+	margin-right: 2px;
+	fill: #AAA;
+}
+
+.rt1 > svg:nth-child(1) {
+	fill: #FFF;
+}
+
+.rt2 > svg:nth-child(-n+2) {
+	fill: #FFF;
+}
+
+.rt3 > svg:nth-child(-n+3) {
+	fill: #FFF;
+}
+
+.rt4 > svg:nth-child(-n+4) {
+	fill: #FFF;
+}
+
+.rt5 > svg {
+	fill: #FFF;
+}
+
+.overlay > .UnderWrap {
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.overlay > .UnderWrap > a > .summary-button {
+    float: left;
+    width: 110px;
+    height: 44px;
+    margin-left: 10px;
+    background: none;
+    border: 2px solid #FFF;
+    border-radius: 100px;
+    color: #FFF;
+}
+
+.overlay > .UnderWrap > a > .cta {
+    float: left;
+    width: 140px;
+    height: 44px;
+    margin-left: calc(50% - 130px);
+    background: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 100px;
+    color: #f1670b;
+}
+
+.overlay > .UnderWrap > .StartingDate {
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    color: #FFF;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.overall {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 200px;
+    margin-left: calc(50% - 500px);
+}
+
+.overall > div {
+    width: 250px;
+    height: 100%;
+    margin-right: 30px;
+    border-right: 1px solid #BBB;
+}
+
+.overall > div:nth-child(3) {
+    border-right: none;
+    margin-right: 0px;
+}
+
+.overall > div > .row1 {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.overall > div > .row2 {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.about, 
+.other-materials {
+    float: left;
+    width: 1000px;
+    margin-left: calc(50% - 500px);
+}
+
+.about > .title,
+.other-materials > .title {
+    float: left;
+    clear: both;
+    width: 1000px;
+    font-size: 28px;
+    margin: 0px calc(50% - 500px);
+    color: #f1670b;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.about > .description {
+    float: left;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.other-materials > .FlexItems {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 20px 0px;
+}
+
+.other-materials > .FlexItems > .card {
+    float: left;
+	width: 160px;
+	height: 185px;
+    margin-right: 16px;
+    background: #FFF;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.12)
+}
+
+.other-materials > .FlexItems > .card > img {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 40px 50px 20px;
+    opacity: 0.6;
+}
+
+.other-materials > .FlexItems > .card > .title {
+    float: left;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0px;
+}
+
+.feedbacks {
+    float: left;
+    width: 1000px;
+    height: auto;
+    margin-top: 30px;
+    margin-left: calc(50% - 500px);
+}
+
+.feedbacks > .left {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 240px;
+}
+
+.feedbacks > .right {
+    float: right;
+    width: 46.6%;
+    min-height: 240px;
+}
+
+.feedbacks > .left > .title {
+    float: left;
+    clear: both;
+    width: 100%;
+    font-size: 32px;
+    color: #f1670b;
+    font-weight: 600;
+}
+
+.feedbacks > .left > .description {
+    font-size: 14px;
+    color: #888;
+}
+
+.feedbacks {
+    margin-top: 50px;
+}
+
+.feedbacks > .right {
+    margin-top: -50px;
+}
+
+#feedback1 {
+    float: left;
+	width: 100%;
+    height: auto;
+	min-height: 210px;
+    margin: 10px 0px;
+    background: #FFF;
+	border-radius: 4px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.12);
+}
+
+#feedback1 > .picture {
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+
+#feedback1 > .FeedbackName {
+	float: left;
+	width: calc(100% - 120px);
+	height: auto;
+	clear: right;
+	margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+#feedback1 > .FeedbackPosition {
+	float: left;
+	width: calc(100% - 120px);
+	height: auto;
+	clear: right;
+	margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+	font-size: 14px;
+}
+
+#feedback1 > .rating {
+	float: left;
+	width: calc(100% - 120px);
+	height: auto;
+	clear: right;
+	margin-left: 18px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+	font-size: 14px;
+}
+
+#feedback1 > .rating > svg {
+	float: left;
+	margin-right: -2px;
+	fill: #AAA;
+}
+
+#feedback1 > .rt1 > svg:nth-child(1) {
+	fill: #FA4616;
+}
+
+#feedback1 > .rt2 > svg:nth-child(-n+2) {
+	fill: #FA4616;
+}
+
+#feedback1 > .rt3 > svg:nth-child(-n+3) {
+	fill: #FA4616;
+}
+
+#feedback1 > .rt4 > svg:nth-child(-n+4) {
+	fill: #FA4616;
+}
+
+#feedback1 > .rt5 > svg {
+	fill: #FA4616;
+}
+
+#feedback1 > .FeedbackText {
+	float: left;
+	width: calc(100% - 50px);
+	height: auto;
+	margin-left: 15px;
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+.call-to-action-final {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 80px;
+    margin: 20px 0px 0px;
+    background-color: #f1670b;
+}
+
+.call-to-action-final > .wrapper {
+    position: absolute;
+    width: 1000px;
+    height: 100%;
+    top: 0px;
+    left: calc(50% - 500px);
+    right: auto;
+}
+
+.call-to-action-final > .wrapper > .title {
+    float: left;
+    width: auto;
+    margin: 0px;
+    margin-top: 27px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.call-to-action-final > .wrapper > a > button {
+    float: right;
+    width: 140px;
+    height: 40px;
+    margin-top: 21px;
+    background: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 100px;
+    color: #f1670b;
+}
+
+@media screen and (max-width: 1060px) {
+    .summary, .overall {
+        float: left;
+        width: 100%;
+        max-width: none;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    .about > .title, .other-materials > .title {
+        width: 90%;
+        margin: 0px;
+    }
+
+    .about, .other-materials, .feedbacks  {
+        float: left;
+        width: 90%;
+        margin: 20px 5%;
+    }
+
+    .feedbacks > .left, 
+    .feedbacks > .right {
+        float: left;
+        width: 100%;
+        height: auto;
+        min-height: 0px;
+        clear: both;
+    }
+
+    .feedbacks > .right {
+        width: 70%;
+        height: 240px;
+        margin: auto 15%;
+    }
+
+    .about > .description,
+    .feedbacks > .left > .description {
+        font-size: 16px;
+    }
+
+    .call-to-action-final > .wrapper {
+        left: 5%;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    section, .about, 
+    .other-materials {
+        width: 90%;
+        max-width: none;
+        margin: 20px 5%;
+    }
+
+    .overall > div {
+        width: 29.3%;
+        margin-right: 0px;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .overlay > .CourseName {
+        font-size: 30px;
+    }
+
+    .overall {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .overall > div {
+        width: 90%;
+        height: 150px;
+        margin: 20px 5%;
+        border-right: none;
+        border-bottom: 1px solid #BBB;
+    }
+
+    .feedbacks > .right {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .call-to-action-final {
+        height: 160px;
+    }
+
+    .call-to-action-final > .wrapper > .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .call-to-action-final > .wrapper > a > button {
+        float: left;
+        margin-left: calc(50% - 55px);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .other-materials > .FlexItems > .card {
+        width: 100%;
+        height: 85px;
+        margin-bottom: 20px;
+    }
+
+    .other-materials > .FlexItems > .card > img {
+        width: 45px;
+        height: 45px;
+        margin: 20px;
+    }
+
+    .other-materials > .FlexItems > .card > .title {
+        width: calc(100% - 85px);
+        margin-top: 25px;
+        font-size: 20px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .navigation, .navigation:hover {
+        background: none;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    #feedback1 > .FeedbackText {
+        margin-left: 28px;
+    }
+}
