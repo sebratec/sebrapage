@@ -1,3 +1,7 @@
+.highlight {
+	color:rgb(241, 103, 11);
+}
+
 .menu-toggle {
 	padding-left: 17px !important;
 }
@@ -275,6 +279,26 @@
 	top: 170px;
 }
 
+#AgreeToPP {
+	float: left;
+	clear: left;
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+}
+
+.CheckLabel {
+	width: calc(100% - 55px);
+	float: left;
+	margin-top: 6px;
+}
+
+#recaptchaResponse {
+	float: left;
+	clear: both;
+	margin: 24px 0px;
+}
+
 footer {
 	position: relative;
 	float: left;
@@ -388,5 +412,12 @@ footer > .wrapper > .SocialWrapper > a:hover > svg {
 	footer > .wrapper > .SocialWrapper > a > svg {
 		width: 32px;
 		height: 32px;
+	}
+}
+
+@media screen and (max-width: 758px) {
+	#recaptchaResponse {
+		clear: both;
+		margin-left: calc(50% - 152px);
 	}
 }

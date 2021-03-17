@@ -29,6 +29,15 @@
 <!-- CSS Base -->
 <link id="theme" rel="stylesheet" href="assets/css/themes/theme-energy.css" />
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R6Z74XDZ3E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R6Z74XDZ3E');
+</script>
 </head>
 
 <body>
@@ -63,7 +72,7 @@
 			<div class="module menu left">
 				<ul id="nav-primary" class="nav nav-primary">
 					<li><a href="indexBR.html#home">Inicio</a></li>
-					<li><a href="indexBR.html#services">Serviços</a></li>
+					<li class="highlight"><a href="indexBR.html#services">Serviços</a></li>
 					<li><a href="aboutBR.html">Sobre</a></li>
 					<li><a href="indexBR.html#customers">Parceiros</a></li>
 					<li><a href="academyBR.html">Academy</a></li>
@@ -216,9 +225,16 @@
 
 						<div id="recaptchaResponse" class="g-recaptcha" data-sitekey="6LfR3fMUAAAAAFwhOtoNmUj1D5POv2kBy6kqaWB0"></div>
 
-						<div class="row" style="margin-top: 15px">
+						<div class="col-md-12 col-sm-12" style="float: left; margin-bottom: 12px">
+							<input id="AgreeToPP" type="checkbox">
+							<label class="CheckLabel" for="AgreeToPP">
+								Ao enviar a mensagem, você concorda com os <a class="highlight" target="_blank" href="Privacy-Policy-Sebratec.pdf">Termos e Politica de Privacidade</a>.
+							</label>
+						</div>
+
+						<div class="row" style="width: 100%; float: left; clear: both; margin-top: 15px">
 							<div class="col-md-4 col-sm-6">
-								<button type="submit" class="btn btn-filled btn-submit btn-block"><span>Enviar <i class="i-after ti-arrow-right"></i></span></button>
+								<button type="submit" class="btn btn-filled btn-submit btn-block"><span>Send it <i class="i-after ti-arrow-right"></i></span></button>
 							</div>
 						</div>
 					</form>
