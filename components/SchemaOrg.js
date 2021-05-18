@@ -1,4 +1,4 @@
-class SchemaOrg extends HTMLMetaElement {
+class SchemaOrg extends HTMLElement {
     constructor() {
       super();
     }
