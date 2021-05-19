@@ -10,9 +10,6 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <div id="nav-bar">
-                <span>
-                ${this.getAttribute("language")}
-                </span>
                 <!-- Logo -->
                 <a class="logo-wrapper" href="index.html">
                     <svg class="the-logo" viewBox="0 0 1029 495" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
@@ -98,8 +95,8 @@ class Header extends HTMLElement {
             default:
                 return `                    
                     <button id="LangTrigger">
-                        <img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
-                    </button>` 
+                        <img src="https://sebratec.com/assets/img/flags/eur.png" alt="English" class="flag">
+                    </button>`
         }
     }
   }
