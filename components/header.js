@@ -4,14 +4,14 @@ class Header extends HTMLElement {
     }
     
     static get observedAttributes() {
-        return ['language'];
-    }  
+        return ['language', 'pageUrl'];
+    }
 
     connectedCallback() {
         this.innerHTML = `
             <div id="nav-bar">
                 <span>
-                    
+                ${this.getAttribute("language")}
                 </span>
                 <!-- Logo -->
                 <a class="logo-wrapper" href="index.html">
@@ -53,41 +53,34 @@ class Header extends HTMLElement {
                     ${this.getFlag()}
                     
                     <div id="LangSelect">
-                        <a href="index.html" class="LangLink">
-                            <div class="LangOption ${(this.getAttribute("language") === 'en') ? "active" : ""} ">
-                                <img src="https://sebratec.com/assets/img/flags/eur.png" alt="English" class="flag">
-                                <p>English</p>
-                                <small>In use</small>
-                            </div>
-                        </a>
-                        <a href="indexSE.html" class="LangLink ${(this.getAttribute("language") === 'se') ? "active" : ""} ">
-                            <div class="LangOption">
-                                <img src="https://sebratec.com/assets/img/flags/swe.png" alt="Svenska" class="flag">
-                                <p>Svenska</p>
-                                <small>Aktiv</small>
-                            </div>
-                        </a>
-                        <a href="indexBR.html" class="LangLink ${(this.getAttribute("language") === 'pt') ? "active" : ""} ">
-                            <div class="LangOption">
-                                <img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
-                                <p>Português</p>
-                                <small>Ativo</small>
-                            </div>
-                        </a>
+                        <div id="enFlag" class="LangOption ${(this.getAttribute("language") === 'en') ? "active" : ""} " style="cursor: pointer;">
+                            <img src="https://sebratec.com/assets/img/flags/eur.png" alt="English" class="flag">
+                            <p>English</p>
+                            <small>In use</small>
+                        </div>
+                        <div id="enSweden" class="LangOption ${(this.getAttribute("language") === 'se') ? "active" : ""} " style="cursor: pointer;">
+                            <img src="https://sebratec.com/assets/img/flags/swe.png" alt="Svenska" class="flag">
+                            <p>Svenska</p>
+                            <small>Aktiv</small>
+                        </div>
+                        <div id="enBrazil" class="LangOption ${(this.getAttribute("language") === 'pt') ? "active" : ""} " style="cursor: pointer;">
+                            <img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
+                            <p>Português</p>
+                            <small>Ativo</small>
+                        </div>
                     </div>
                 </div>
             </div>
             `;
-        document.querySelector('#LangTrigger').onclick = function() {ToggleLangMenu()};
-    }
 
-    ToggleLangMenu() {
-        var ToggleMenu = document.getElementById("LangSelect");
-        if (ToggleMenu.style.display === "block") {
-            ToggleMenu.style.display = "none";
-        } else {
-            ToggleMenu.style.display = "block";
-        }
+        // var baseUrl = "https://sebratec.com"
+        var baseUrl = "http://localhost/sebrapage"
+        var url = this.getAttribute("pageUrl")
+
+        document.querySelector('#LangTrigger').onclick = function() {ToggleLangMenu()};
+        document.querySelector('#enFlag').onclick = function() { window.location = `${baseUrl}/${url}` };
+        document.querySelector('#enSweden').onclick = function() { window.location = `${baseUrl}/se/${url}` };
+        document.querySelector('#enBrazil').onclick = function() { window.location = `${baseUrl}/pt/${url}` };
     }
 
     getFlag() {
