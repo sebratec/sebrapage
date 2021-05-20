@@ -9,7 +9,8 @@ class Header extends HTMLElement {
 
     connectedCallback() {
         var selectedLanguage = this.getAttribute("language")
-
+        var url = this.getAttribute("pageUrl")
+        
         this.innerHTML = `
             <div id="nav-bar">
                 <!-- Logo -->
@@ -67,8 +68,21 @@ class Header extends HTMLElement {
 
         // var baseUrl = "https://sebratec.com"
         var baseUrl = "http://localhost/sebrapage"
-        var url = this.getAttribute("pageUrl")
-
+        var urlDictionary = { 
+            se: { 
+                index: "se/index.html#home",
+                about: "se/index.html#services",
+            },
+            pt: { 
+                index: "pt/index.html#home",
+                about: "pt/index.html#services",
+            },
+            en: { 
+                index: "/index.html#home",
+                about: "/index.html#services",
+            },
+        }
+        
         document.querySelector('#LangTrigger').onclick = function() {  
             var ToggleMenu = document.getElementById("LangSelect");
   
@@ -79,9 +93,9 @@ class Header extends HTMLElement {
             }
         };
 
-        document.querySelector('#enFlag').onclick = function() { window.location = `${baseUrl}/${url}` };
-        document.querySelector('#enSweden').onclick = function() { window.location = `${baseUrl}/se/${url}` };
-        document.querySelector('#enBrazil').onclick = function() { window.location = `${baseUrl}/pt/${url}` };
+        document.querySelector('#enFlag').onclick = function() { window.location = `${baseUrl}/${urlDictionary['en'][url]}` };
+        document.querySelector('#enSweden').onclick = function() { window.location = `${baseUrl}/${urlDictionary['se'][url]}` };
+        document.querySelector('#enBrazil').onclick = function() { window.location = `${baseUrl}/${urlDictionary['pt'][url]}` };
     }
 
     getFlag() {
@@ -110,7 +124,7 @@ class Header extends HTMLElement {
             se: [
                 {url: "#home", title: "HEM"},
                 {url: "#services", title: "TJÄNSTER"},
-                {url: "#about", title: "OM"},
+                {url: "om-sebratec.html", title: "OM"},
                 {url: "#customers", title: "PARTNERS"},
                 {url: "academy.html", title: "ACADEMY"},
                 {url: "https://blog.sebratec.com", title: "BLOGG"},
@@ -120,7 +134,7 @@ class Header extends HTMLElement {
             pt: [
                 {url: "#home", title: "INICIO"},
                 {url: "#services", title: "SERVIÇOS"},
-                {url: "#about", title: "SOBRE"},
+                {url: "sobre-sebratec.html", title: "SOBRE"},
                 {url: "#customers", title: "PARCEIROS"},
                 {url: "academy.html", title: "ACADEMY"},
                 {url: "https://blog.sebratec.com", title: "BLOG"},
@@ -130,7 +144,7 @@ class Header extends HTMLElement {
             en: [
                 {url: "#home", title: "Home"},
                 {url: "#services", title: "Services"},
-                {url: "#about", title: "About"},
+                {url: "about-sebratec.html", title: "About"},
                 {url: "#customers", title: "Partners"},
                 {url: "academy.html", title: "Academy"},
                 {url: "https://blog.sebratec.com", title: "Blog"},
@@ -142,6 +156,11 @@ class Header extends HTMLElement {
         return menuDictionary[selectedLanguage].map((menuOption) => {
             return `<li><a href="${menuOption.url}">${menuOption.title}</a></li>`
         }).join("")
+    }
+
+    translateUrl(language, urlName) {
+
+        return ``
     }
   }
   
