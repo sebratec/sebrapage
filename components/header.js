@@ -71,15 +71,15 @@ class Header extends HTMLElement {
         var urlDictionary = { 
             se: { 
                 index: "se/index.html#home",
-                about: "se/index.html#services",
+                about: "se/om-sebratec.html",
             },
             pt: { 
                 index: "pt/index.html#home",
-                about: "pt/index.html#services",
+                about: "pt/sobre-sebratec.html",
             },
             en: { 
-                index: "/index.html#home",
-                about: "/index.html#services",
+                index: "index.html#home",
+                about: "about-sebratec.html",
             },
         }
         
@@ -156,11 +156,6 @@ class Header extends HTMLElement {
         return menuDictionary[selectedLanguage].map((menuOption) => {
             return `<li><a href="${menuOption.url}">${menuOption.title}</a></li>`
         }).join("")
-    }
-
-    translateUrl(language, urlName) {
-
-        return ``
     }
   }
   
