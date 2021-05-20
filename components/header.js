@@ -8,6 +8,8 @@ class Header extends HTMLElement {
     }
 
     connectedCallback() {
+        var selectedLanguage = this.getAttribute("language")
+
         this.innerHTML = `
             <div id="nav-bar">
                 <!-- Logo -->
@@ -28,14 +30,7 @@ class Header extends HTMLElement {
                     <!-- Primary Menu -->
                     <div class="module menu left">
                         <ul id="nav-primary" class="nav nav-primary">
-                            <li><a href="#home">Home</a></li>
-                            <li class="highlight"><a href="#services">Services</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#customers">Partners</a></li>
-                            <li><a href="academy.html">Academy</a></li>
-                            <li><a href="https://blog.sebratec.com">Blog</a></li>
-                            <li><a href="https://sebratec-ab.breezy.hr/">Careers</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            ${this.getMenu()}
                         </ul>
                     </div>
                 </nav>
@@ -50,17 +45,17 @@ class Header extends HTMLElement {
                     ${this.getFlag()}
                     
                     <div id="LangSelect">
-                        <div id="enFlag" class="LangOption ${(this.getAttribute("language") === 'en') ? "active" : ""} " style="cursor: pointer;">
+                        <div id="enFlag" class="LangOption ${(selectedLanguage === 'en') ? "active" : ""} " style="cursor: pointer;">
                             <img src="https://sebratec.com/assets/img/flags/eur.png" alt="English" class="flag">
                             <p>English</p>
                             <small>In use</small>
                         </div>
-                        <div id="enSweden" class="LangOption ${(this.getAttribute("language") === 'se') ? "active" : ""} " style="cursor: pointer;">
+                        <div id="enSweden" class="LangOption ${(selectedLanguage === 'se') ? "active" : ""} " style="cursor: pointer;">
                             <img src="https://sebratec.com/assets/img/flags/swe.png" alt="Svenska" class="flag">
                             <p>Svenska</p>
                             <small>Aktiv</small>
                         </div>
-                        <div id="enBrazil" class="LangOption ${(this.getAttribute("language") === 'pt') ? "active" : ""} " style="cursor: pointer;">
+                        <div id="enBrazil" class="LangOption ${(selectedLanguage === 'pt') ? "active" : ""} " style="cursor: pointer;">
                             <img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
                             <p>Português</p>
                             <small>Ativo</small>
@@ -74,7 +69,16 @@ class Header extends HTMLElement {
         var baseUrl = "http://localhost/sebrapage"
         var url = this.getAttribute("pageUrl")
 
-        document.querySelector('#LangTrigger').onclick = function() {ToggleLangMenu()};
+        document.querySelector('#LangTrigger').onclick = function() {  
+            var ToggleMenu = document.getElementById("LangSelect");
+  
+            if (ToggleMenu.style.display === "block") {
+                ToggleMenu.style.display = "none";
+            } else {
+                ToggleMenu.style.display = "block";
+            }
+        };
+
         document.querySelector('#enFlag').onclick = function() { window.location = `${baseUrl}/${url}` };
         document.querySelector('#enSweden').onclick = function() { window.location = `${baseUrl}/se/${url}` };
         document.querySelector('#enBrazil').onclick = function() { window.location = `${baseUrl}/pt/${url}` };
@@ -98,6 +102,46 @@ class Header extends HTMLElement {
                         <img src="https://sebratec.com/assets/img/flags/eur.png" alt="English" class="flag">
                     </button>`
         }
+    }
+
+    getMenu() {
+        var selectedLanguage = this.getAttribute("language")
+        var menuDictionary = {
+            se: [
+                {url: "#home", title: "HEM"},
+                {url: "#services", title: "TJÄNSTER"},
+                {url: "#about", title: "OM"},
+                {url: "#customers", title: "PARTNERS"},
+                {url: "academy.html", title: "ACADEMY"},
+                {url: "https://blog.sebratec.com", title: "BLOGG"},
+                {url: "https://sebratec-ab.breezy.hr", title: "KARRIÄR"},
+                {url: "contact.html", title: "KONTAKT"},
+            ],
+            pt: [
+                {url: "#home", title: "INICIO"},
+                {url: "#services", title: "SERVIÇOS"},
+                {url: "#about", title: "SOBRE"},
+                {url: "#customers", title: "PARCEIROS"},
+                {url: "academy.html", title: "ACADEMY"},
+                {url: "https://blog.sebratec.com", title: "BLOG"},
+                {url: "https://sebratec-ab.breezy.hr", title: "CARREIRAS"},
+                {url: "contact.html", title: "CONTATO"},
+            ],
+            en: [
+                {url: "#home", title: "Home"},
+                {url: "#services", title: "Services"},
+                {url: "#about", title: "About"},
+                {url: "#customers", title: "Partners"},
+                {url: "academy.html", title: "Academy"},
+                {url: "https://blog.sebratec.com", title: "Blog"},
+                {url: "https://sebratec-ab.breezy.hr", title: "Careers"},
+                {url: "contact.html", title: "Contact"},
+            ],
+        }
+
+        return menuDictionary[selectedLanguage].map((menuOption) => {
+            return `<li><a href="${menuOption.url}">${menuOption.title}</a></li>`
+        }).join("")
     }
   }
   

@@ -130,15 +130,15 @@
 	height: 53px !important;
 }
 
-#LangSelect > a > .active {
+#LangSelect > .active {
 	background-color: #DDD;
 }
 
-#LangSelect > a > .active > p {
+#LangSelect > .active > p {
 	margin-top: 3px;
 }
 
-#LangSelect > a > .active > small {
+#LangSelect > .active > small {
 	display: block;
 }
 
