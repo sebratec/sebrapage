@@ -66,8 +66,8 @@ class Header extends HTMLElement {
             </div>
             `;
 
-        // var baseUrl = "https://sebratec.com"
-        var baseUrl = "http://localhost/sebrapage"
+        var baseUrl = "https://sebratec.com"
+        // var baseUrl = "http://localhost/sebrapage"
         var urlDictionary = { 
             se: { 
                 index: "se/index.html#home",
