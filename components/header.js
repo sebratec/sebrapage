@@ -68,7 +68,7 @@ class Header extends HTMLElement {
                         <div id="enNetherlands" class="LangOption ${(selectedLanguage === 'nl') ? "active" : ""} " style="cursor: pointer;">
                             <img src="${this.baseUrl}/assets/img/flags/nl.png" alt="Dutch" class="flag">
                             <p>Dutch</p>
-                            <small>Aktiv</small>
+                            <small>Actief</small>
                         </div>                        
                     </div>
                 </div>
