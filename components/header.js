@@ -4,7 +4,7 @@ class Header extends HTMLElement {
     }
     
     static get observedAttributes() {
-        return ['language', 'pageUrl'];
+        return ['language', 'pageUrl', 'academy', 'computerVision'];
     }
 
     connectedCallback() {
@@ -72,14 +72,29 @@ class Header extends HTMLElement {
             se: { 
                 index: "se/index.html#home",
                 about: "se/om-sebratec.html",
+                academy: "se/sebratec-akademi.html",
+                computerVision: "se/computer-vision.html",
+                contact: "se/kontakt.html",
+                deepLearning: "se/deep-learning.html",
+                deployModel: "se/deploy-model.html"
             },
             pt: { 
                 index: "pt/index.html#home",
                 about: "pt/sobre-sebratec.html",
+                academy: "pt/academia-sebratec.html",
+                computerVision: "pt/visao-computacional.html",
+                contact: "pt/contato.html",
+                deepLearning: "pt/deep-learning.html",
+                deployModel: "pt/deploy-model.html"
             },
             en: { 
                 index: "index.html#home",
                 about: "about-sebratec.html",
+                academy: "sebratec-academy.html",
+                computerVision: "computer-vision.html",
+                contact: "contact.html",
+                deepLearning: "deep-learning.html",
+                deployModel: "deploy-model.html"
             },
         }
         
@@ -122,31 +137,31 @@ class Header extends HTMLElement {
         var selectedLanguage = this.getAttribute("language")
         var menuDictionary = {
             se: [
-                {url: "#home", title: "HEM"},
-                {url: "#services", title: "TJÄNSTER"},
+                {url: "index.html#home", title: "HEM"},
+                {url: "index.html#services", title: "TJÄNSTER"},
                 {url: "om-sebratec.html", title: "OM"},
-                {url: "#customers", title: "PARTNERS"},
-                {url: "academy.html", title: "ACADEMY"},
+                {url: "index.html#customers", title: "PARTNERS"},
+                {url: "sebratec-akademi.html", title: "ACADEMY"},
                 {url: "https://blog.sebratec.com", title: "BLOGG"},
                 {url: "https://sebratec-ab.breezy.hr", title: "KARRIÄR"},
-                {url: "contact.html", title: "KONTAKT"},
+                {url: "kontakt.html", title: "KONTAKT"},
             ],
             pt: [
-                {url: "#home", title: "INICIO"},
-                {url: "#services", title: "SERVIÇOS"},
+                {url: "index.html#home", title: "INICIO"},
+                {url: "index.html#services", title: "SERVIÇOS"},
                 {url: "sobre-sebratec.html", title: "SOBRE"},
-                {url: "#customers", title: "PARCEIROS"},
-                {url: "academy.html", title: "ACADEMY"},
+                {url: "index.html#customers", title: "PARCEIROS"},
+                {url: "academia-sebratec.html", title: "ACADEMY"},
                 {url: "https://blog.sebratec.com", title: "BLOG"},
                 {url: "https://sebratec-ab.breezy.hr", title: "CARREIRAS"},
-                {url: "contact.html", title: "CONTATO"},
+                {url: "contato.html", title: "CONTATO"},
             ],
             en: [
-                {url: "#home", title: "Home"},
-                {url: "#services", title: "Services"},
+                {url: "index.html#home", title: "Home"},
+                {url: "index.html#services", title: "Services"},
                 {url: "about-sebratec.html", title: "About"},
-                {url: "#customers", title: "Partners"},
-                {url: "academy.html", title: "Academy"},
+                {url: "index.html#customers", title: "Partners"},
+                {url: "sebratec-academy.html", title: "Academy"},
                 {url: "https://blog.sebratec.com", title: "Blog"},
                 {url: "https://sebratec-ab.breezy.hr", title: "Careers"},
                 {url: "contact.html", title: "Contact"},
