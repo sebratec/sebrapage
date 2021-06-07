@@ -3,4 +3,4 @@ user-agent: *
 Disallow:
 Allow: 
 
-Sitemap: 
+Sitemap: https://sebratec.com/sitemaps.xml
