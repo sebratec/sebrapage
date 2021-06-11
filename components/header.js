@@ -1,13 +1,17 @@
 class Header extends HTMLElement {
+    // var baseUrl = "https://sebratec.com"
+    baseUrl = "http://localhost/sebrapage"
+
     constructor() {
       super();
     }
     
     static get observedAttributes() {
-        return ['language', 'pageUrl', 'academy', 'computerVision'];
+        return ['language', 'pageUrl'];
     }
 
     connectedCallback() {
+        
         var selectedLanguage = this.getAttribute("language")
         var url = this.getAttribute("pageUrl")
         
@@ -47,27 +51,25 @@ class Header extends HTMLElement {
                     
                     <div id="LangSelect">
                         <div id="enFlag" class="LangOption ${(selectedLanguage === 'en') ? "active" : ""} " style="cursor: pointer;">
-                            <img src="https://sebratec.com/assets/img/flags/eur.png" alt="English" class="flag">
+                            <img src="${this.baseUrl}/assets/img/flags/eur.png" alt="English" class="flag">
                             <p>English</p>
                             <small>In use</small>
                         </div>
                         <div id="enSweden" class="LangOption ${(selectedLanguage === 'se') ? "active" : ""} " style="cursor: pointer;">
-                            <img src="https://sebratec.com/assets/img/flags/swe.png" alt="Svenska" class="flag">
+                            <img src="${this.baseUrl}/assets/img/flags/swe.png" alt="Svenska" class="flag">
                             <p>Svenska</p>
                             <small>Aktiv</small>
                         </div>
                         <div id="enBrazil" class="LangOption ${(selectedLanguage === 'pt') ? "active" : ""} " style="cursor: pointer;">
-                            <img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
+                            <img src="${this.baseUrl}/assets/img/flags/bra.png" alt="Português" class="flag">
                             <p>Português</p>
                             <small>Ativo</small>
-                        </div>
+                        </div>                      
                     </div>
                 </div>
             </div>
             `;
 
-        var baseUrl = "https://sebratec.com"
-        // var baseUrl = "http://localhost/sebrapage"
         var urlDictionary = { 
             se: { 
                 index: "se/index.html#home",
@@ -96,8 +98,18 @@ class Header extends HTMLElement {
                 deepLearning: "deep-learning.html",
                 deployModel: "deploy-model.html"
             },
+            nl: { 
+                index: "nl/index.html#home",
+                about: "nl/about-sebratec.html",
+                academy: "nl/sebratec-academy.html",
+                computerVision: "nl/computer-vision.html",
+                contact: "nl/contact.html",
+                deepLearning: "nl/deep-learning.html",
+                deployModel: "nl/deploy-model.html"
+            },
         }
         
+        var localBaseUrl = this.baseUrl
         document.querySelector('#LangTrigger').onclick = function() {  
             var ToggleMenu = document.getElementById("LangSelect");
   
@@ -108,9 +120,10 @@ class Header extends HTMLElement {
             }
         };
 
-        document.querySelector('#enFlag').onclick = function() { window.location = `${baseUrl}/${urlDictionary['en'][url]}` };
-        document.querySelector('#enSweden').onclick = function() { window.location = `${baseUrl}/${urlDictionary['se'][url]}` };
-        document.querySelector('#enBrazil').onclick = function() { window.location = `${baseUrl}/${urlDictionary['pt'][url]}` };
+        document.querySelector('#enFlag').onclick = function() { window.location = `${localBaseUrl}/${urlDictionary['en'][url]}` };
+        document.querySelector('#enSweden').onclick = function() { window.location = `${localBaseUrl}/${urlDictionary['se'][url]}` };
+        document.querySelector('#enBrazil').onclick = function() { window.location = `${localBaseUrl}/${urlDictionary['pt'][url]}` };
+        document.querySelector('#enNetherlands').onclick = function() { window.location = `${localBaseUrl}/${urlDictionary['nl'][url]}` };
     }
 
     getFlag() {
@@ -118,17 +131,22 @@ class Header extends HTMLElement {
             case "se":
                 return `                    
                     <button id="LangTrigger">
-                        <img src="https://sebratec.com/assets/img/flags/swe.png" alt="Svenska" class="flag">
+                        <img src="${this.baseUrl}/assets/img/flags/swe.png" alt="Svenska" class="flag">
                     </button>` 
             case "pt":
                 return `                    
                     <button id="LangTrigger">
-                        <img src="https://sebratec.com/assets/img/flags/bra.png" alt="Português" class="flag">
+                        <img src="${this.baseUrl}/assets/img/flags/bra.png" alt="Português" class="flag">
+                    </button>` 
+            case "nl":
+                return `                    
+                    <button id="LangTrigger">
+                        <img src="${this.baseUrl}/assets/img/flags/nl.png" alt="Dutch" class="flag">
                     </button>` 
             default:
                 return `                    
                     <button id="LangTrigger">
-                        <img src="https://sebratec.com/assets/img/flags/eur.png" alt="English" class="flag">
+                        <img src="${this.baseUrl}/assets/img/flags/eur.png" alt="English" class="flag">
                     </button>`
         }
     }
@@ -157,6 +175,16 @@ class Header extends HTMLElement {
                 {url: "contato.html", title: "CONTATO"},
             ],
             en: [
+                {url: "index.html#home", title: "Home"},
+                {url: "index.html#services", title: "Services"},
+                {url: "about-sebratec.html", title: "About"},
+                {url: "index.html#customers", title: "Partners"},
+                {url: "sebratec-academy.html", title: "Academy"},
+                {url: "https://blog.sebratec.com", title: "Blog"},
+                {url: "https://sebratec-ab.breezy.hr", title: "Careers"},
+                {url: "contact.html", title: "Contact"},
+            ],
+            nl: [
                 {url: "index.html#home", title: "Home"},
                 {url: "index.html#services", title: "Services"},
                 {url: "about-sebratec.html", title: "About"},
