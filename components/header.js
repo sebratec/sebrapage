@@ -1,6 +1,6 @@
 class Header extends HTMLElement {
-    // var baseUrl = "https://sebratec.com"
-    baseUrl = "http://localhost/sebrapage"
+    baseUrl = "https://sebratec.com"
+    // baseUrl = "http://localhost/sebrapage"
 
     constructor() {
       super();
