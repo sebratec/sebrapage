@@ -26,18 +26,18 @@ class SignarureGenerator extends HTMLElement {
                 />
               </div>
               <div class="form-group col-sm-6">
-              <input
-                name="email"
-                id="email"
-                type="text"
-                class="form-control"
-                placeholder="E-mail address"
-                required
-              />
+                      <input
+                  name="email"
+                  id="email"
+                  type="text"
+                  class="form-control"
+                  placeholder="E-mail address"
+                  required
+                />
               </div>
-              </div>
+            </div>
               
-              <div class="row">
+            <div class="row">
               <div class="form-group col-sm-6">
               <input
                 name="position"
@@ -57,9 +57,51 @@ class SignarureGenerator extends HTMLElement {
                   placeholder="picture"
                   required
                 />
-                </div>
+              </div>
             </div>
+            <div class="row">
 
+            <div class="form-group col-sm-6" styly="flex-direction: column">
+              <span>Office Adress</span>
+              <div>
+                <input 
+                  type="radio" 
+                  id="sweden" 
+                  name="office" 
+                  value="Sweden"
+                  checked>
+                <label for="sweden">Sweden</label>
+              </div>
+              <div>
+                <input 
+                  type="radio" 
+                  id="brazil" 
+                  name="office" 
+                  value="Brasil"
+                  >
+                <label for="brazil">Brasil</label>
+              </div>
+              <div>
+                <input 
+                  type="radio" 
+                  id="netherlands" 
+                  name="office" 
+                  value="Netherlands"
+                  >
+                <label for="netherlands">Netherlands</label>
+              </div>
+            </div>
+            <div class="form-group col-sm-6">
+              <input
+                name="phone"
+                id="phone"
+                type="text"
+                class="form-control"
+                placeholder="Telephone number"
+                required
+              />
+            </div>
+          </div>
             <div
               class="row"
               style="width: 100%; float: left; clear: both; margin-top: 15px"
@@ -78,7 +120,9 @@ class SignarureGenerator extends HTMLElement {
           </form>
         </div>
         <div style="flex: 2; padding: 10px" flex-direction:column '>
-          <div id='signaturePreview'></div>
+          <div id='signaturePreview'>
+
+        </div>
           <div style="margin-top: 10px;" class="col-md-4 col-sm-6" >
             <button
               class="btn btn-filled btn-submit btn-block"
@@ -122,6 +166,46 @@ class SignarureGenerator extends HTMLElement {
       };
       reader.readAsBinaryString(picture);
 
+      var officeAdress = ''
+      switch (data.office) {
+        case "Sweden":
+          officeAdress = `                    
+            <p style=\"margin: 10px 0 0 0;font-size: 13px;\">
+              Kämpegatan 6
+            </p>
+            <p style=\"margin:0;font-size: 13px;\">
+              41104 - Göteborg - Sweden
+            </p>` 
+            break;
+        case "Brasil":
+          officeAdress = `                    
+            <p style=\"margin: 10px 0 0 0;font-size: 13px;\">
+                Rua Oscar Freire 379 - Conj 121 Sala 5
+            </p>
+            <p style=\"margin:0;font-size: 13px;\">
+                CEP 01426-900 - Cerqueira Cesar - Sao Paulo – Brazil
+            </p>` 
+            break;
+        case "Netherlands":
+          officeAdress = `                    
+            <p style=\"margin: 10px 0 0 0;font-size: 13px;\">
+                Rua Oscar Freire 379 - Conj 121 Sala 5
+            </p>
+            <p style=\"margin:0;font-size: 13px;\">
+                CEP 01426-900 - Cerqueira Cesar - Sao Paulo – Brazil
+            </p>` 
+            break;
+        default:
+          officeAdress = `                    
+          <p style=\"margin: 10px 0 0 0;font-size: 13px;\">
+            Kämpegatan 6
+          </p>
+          <p style=\"margin:0;font-size: 13px;\">
+            41104 - Göteborg - Sweden
+          </p>` 
+          break;
+      }
+
       setTimeout(() => {
         var signature = document.querySelector('#signaturePreview')
         signature.innerHTML = `
@@ -146,15 +230,13 @@ class SignarureGenerator extends HTMLElement {
                 <span style=\"color: #201747; font-size: 13px;font-weight: bold;\"> E-mail:</span><a style=\"text-decoration: none; color: black;  \" href=\"mailto:${data.email}\" > ${data.email}</a>
               </p>
               <p style=\"margin: 10px 0 0 0;font-size: 13px;\">
-                  Rua Oscar Freire 379 - Conj 121 Sala 5
+                <span style=\"color: #201747; font-size: 13px;font-weight: bold;\"> Phone:</span><a style=\"text-decoration: none; color: black;  \"> ${data.phone}</a>
               </p>
-              <p style=\"margin:0;font-size: 13px;\">
-                  CEP 01426-900 - Cerqueira Cesar - Sao Paulo – Brazil
-              </p>
+              ${officeAdress}
               <p style=\"margin: 12px 0 0 0; width: 298px; text-align: left;\">
                 <a style=\"text-decoration: none;color: white;\" href=\"https://www.linkedin.com/company/sebratec\" target=\"_blank\"><img src=\"https://i.postimg.cc/BZpF7x4n/linkedin.png\" height=\"22\" width=\"22\" > </a>
                 <a style=\"text-decoration: none;color: white; \" href=\"https://www.instagram.com/sebratec/?hl=en\" target=\"_blank\"><img src=\"https://i.postimg.cc/BnL1vkDj/Instagram.png\" height=\"22\" width=\"22\" style=\"margin-left: 3px;\"> </a>
-                <a style=\"text-decoration: none;color: white; \" href=\"https://www.facebook.com/SebratecConsulting/\" target=\"_blank\"><img src=\"https://i.postimg.cc/sxjhD29z/facebook.png\" height=\"22\" width=\"22\" style=\"margin-left: 3px;\"> </a>
+                <a style=\"text-decoration: none;color: white; \" href=\"https://www.facebook.com/SebratecConsultancy/\" target=\"_blank\"><img src=\"https://i.postimg.cc/sxjhD29z/facebook.png\" height=\"22\" width=\"22\" style=\"margin-left: 3px;\"> </a>
               </p>
             </td>
           </tr>
