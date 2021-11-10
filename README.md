@@ -1,2 +1,0 @@
-# sebrapage
-website-mainfolder

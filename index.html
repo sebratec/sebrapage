@@ -1,287 +1,503 @@
 <!DOCTYPE html>
-<html lang="en" data-cookies-popup="true">
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- swiper  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!-- aos  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- font awesome  -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css"
+      integrity="sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+      
+    <div class="sebratec_container">
+      <!-- intro section  -->
+      <div class="intro_section">
+        <!-- sidebar  -->
+        <div class="sidebar_main">
+          <div class="nav_icon" class="openbtn" onclick="openNav()"> 
+            <i class="fas fa-bars bar_icon"></i>
+          </div>
+        </div>
+        <div id="mySidepanel" class="sidepanel">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="#home" onclick="closeNav()">Home</a>
+          <a href="#career" onclick="closeNav()">Career</a>
+          <a href="#about" onclick="closeNav()">About</a>
+          <a href="#blog" onclick="closeNav()">Blog</a>
+          <a href="#contact" onclick="closeNav()">Contact</a>
+          <div class="sidebarFooter">
+            <div class="sideBarLogo">
+            <img src="./Assets/Sebratec white logo.svg" alt="">
+            </div>
+            <p>we aim to establishing a strong partnership</p>
+            <div class="sLinks">
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+               <i class="fab fa-facebook-f"></i>
+             </a>
 
-<!-- Meta -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Sebratec is an I.T. service company. We are specialized in tailored software solutions, consultancy and technology training programs.">
-<meta name="keywords" content="sebratec, academy, sweden, gothenburg, göteborg, consulting, services, Custom Software development, automotive, technology, machine, learning, data, analysis, programming, tutorials, articles, courses, consult, qualification, sustentability, technology acceptance model, car, cyber security, computer systems, augmented reality">
+             <a href="http://" target="_blank" rel="noopener noreferrer">
+               <i class="fab fa-linkedin-in"></i>
+             </a>
+            </div>
+          </div>
+        </div>
+        <div  id='overlay' onclick="closeNav()"></div>
+        <script>
+          function openNav() {
+            document.getElementById('overlay').classList.add('overlay')
+            document.getElementById("mySidepanel").style.width = "270px";
+            document.body.style.overflowY = 'hidden'
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+            document.body.style.overflowY = 'auto'
+            document.getElementById('overlay').classList.remove('overlay')
 
-<!-- Title -->
-<title>Sebratec – Software & Technology</title>
 
-<!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon1_60x60.png">
-<link rel="apple-touch-icon" href="assets/img/favicon1_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon1_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon1_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon1_152x152.png">
+          }
+          </script>
+        <!-- intro content  -->
+        <div class="intro_content_md" id="home">
+          <div class="introMainSection">
+            <div class="intro_content">
+              <h1>
+                Sebratec helps businesses to realise successful tech projects
+              </h1>
+              <p>by providing the best experts and software</p>
+              <div class="getStarted_btn">
+              <a class="orng_btn" href="#expetise">
+                Get Started
+                <div class="t-btn_wrap-effects">
+                  <div class="t-btn_effects"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="introLogoRight">
+            <img src="./Assets/Sebratec white logo.svg" alt="">
+          </div>
+        </div>
+          <div class="services_card_md">
+            <div class="offers">
+              <div class="offer_head">
+                <i class="fas fa-check-circle"></i>
+                <h3>CONSULTING</h3>
+              </div>
+              <p class="offer_detail">
+                We offer different subscription packgaes for our long-term
+                partners. Our experts are ready to complete your dream team.
+              </p>
+            </div>
+            <div class="offers">
+              <div class="offer_head">
+                <i class="fas fa-check-circle"></i>
+                <h3>HIRING & RELOCATION</h3>
+              </div>
+              <p class="offer_detail">
+                The best talents require no boundaries. We open doors to finding
+                top experts on the world market and taking responsibility for
+                relocation.
+              </p>
+            </div>
+            <div class="offers">
+              <div class="offer_head">
+                <i class="fas fa-check-circle"></i>
+                <h3>SOFTWARE</h3>
+              </div>
+              <p class="offer_detail">
+                We offer tailored software solutions where we bring common & innovative technologies to its boundaries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- slider section  -->
+      <div class="slider_container">
+        <h1>
+          TRUSTED BY
+        </h1>
+        <!-- Slider main container -->
+        <div class="swiper mySwiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- <div class="swiper-slide">
+              <img class="cevt_img" src="./Assets/cevt.webp" alt="..." />
+            </div> -->
+            <div class="swiper-slide">
+              <img src="./Assets/Volvo-logo-2014-1920x1080.png" alt="..." />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Assets/SVP+logo.png" alt="..." />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Assets/SKF_logo.svg.png" alt="..." />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Assets/HiberWorld-logo-2-row-1500x1650-.png" alt="..." />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Assets/powercell-logotype-8f753436cd68e601e29f0bb32aa85790.jpg" alt="..." />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Assets/volvo-group-logo_logo_image_wide.png" alt="..." />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Assets/Nevs.png" alt="..." />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Assets/WirelessCar_Logo_RGB.png" alt="..." />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Assets/cevt-logo_2x.png" alt="..." />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Assets/drdry.png" alt="..." />
+            </div>
+          </div>
 
-<!-- Google Web Fonts -->
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600' rel='stylesheet' type='text/css'>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="goals_section" id="expetise">
+        <div class="goals_content">
+          <div class="goal_left_content">
+            <h1>We match our expertise with your goals</h1>
+            <div class="goals_list_md">
+                <ul class="goal_list">
+                    <li><p class="circle"></p> Artificial Intelligence</li>
+                    <li><p class="circle"></p> Mobile</li>
+                    <li><p class="circle"></p> Cloud</li>
+                    <li><p class="circle"></p> Software Architecture</li>
+                </ul>
+                <ul class="goal_list">
+                    <li><p class="circle"></p> Embedded Systems</li>
+                    <li><p class="circle"></p> Integration</li>
+                    <li><p class="circle"></p> Test & Validation</li>
+                    <li><p class="circle"></p>DevOps</li>
+                </ul>
+                
+            </div>
+          </div>
+          <div class="goal_right_content">
+            <div class="goal_list2" data-aos="fade-up"
+            data-aos-duration="1000"
+            >
+              <p class="dot"></p>
+              <div>
+                <h3>Consulting</h3>
+                <p>
+                  We offer different subscription packages for our long-term
+                  partners.
+                  <br> Our experts are ready to complete your dream team.
+                </p>
+              </div>
+            </div>
+            <div class="goal_list2" 
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            >
+              <p class="dot dot2"></p>
+              <div>
+                <h3>Hiring & Realocation</h3>
+                <p>
+                  The best talents require no boundaries. <br> We open doors to finding
+                  top experts on the world market and taking responsibility for
+                  relocation.
+                </p>
+              </div>
+            </div>
+            <div class="goal_list2"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            >
+              <p class="dot dot3"></p>
+              <div>
+                <h3>Customized Software Development</h3>
+                <p>
+                  We are two steps ahead of common technologies and fancy to bring
+                  them to you!
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- how we work  -->
 
-<!-- CSS Styles -->
-<link rel="stylesheet" href="assets/css/styles.css" />
-<link rel="stylesheet" href="assets/css/extra.css" />
+      <div class="containerWork">
+        <div class="workSection">
+          <div class="workHead">
+            <h1>How We Work</h1>
+            <img src="./Assets/Image.png" alt="...">
+          </div>
+        </div>
+      </div>
 
-<!-- CSS Base -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-energy.css" />
+      <!-- about us  -->
+      <div class="aboutContainer" id="about">
+        <div class="aboutLeftSection">
+            <h1 class="aboutHead">
+              ABOUT US
+            </h1>
+            <div class="deskViewAb">
+            <div class="aboutPointsOne">
+              <div class="aboutSubPointOne">
+                <p>More than years of experience</p>
+                <h1>6</h1>
+              </div>
+              <div class="aboutSubPointTwo">
+                <h1>3</h1>
+                <p>Countries are covered with our offices</p>
+              </div>
+            </div>
+            <div class="aboutPointsTwo">
+              <button>Read More</button>
+              <div class="aboutSubPointThre">
+                <h1>80%</h1>
+                <p>of our partners work with us for many years</p>
+              </div>
+            </div>
+          </div>
+          <div class="mobViewAb">
+            <div class="aboutPointsOne">
+              <div class="aboutSubPointThre">
+                <h1>80%</h1>
+                <p>of our partners work with us for many years</p>
+              </div>
+              <div class="aboutSubPointOne">
+                <h1>2016</h1>
+                <p>Delivering the expertise since</p>
+              </div>
+              <div class="aboutSubPointTwo">
+                <h1>3</h1>
+                <p>Countries are covered with our offices</p>
+              </div>
+            </div>
+            <div class="aboutPointsTwo">
+              <button>Read More</button>
+            
+            </div>
+          </div>
+        </div>
+        <div class="aboutrightSection">
+          <img class="deskMap" src="./Assets/Map picture.png" alt="...">
+          <img src="./Assets/Map picture mobile.png" alt="..." class="mobMap">
+        </div>
+      </div>
 
-<style>
-	#shadow { color: white; text-shadow: 2px 2px 4px #000000 };
-</style>
+      <!-- join team section  -->
+      <div class="joinTeamContainer" id="career">
+        <div class="joinTeamSection">
+          <h1 class="joinTeamHead">JOIN OUR TEAM</h1>
+          <div class="joinTeamContent">
+            <div class="joinTeamLeft">
+              <p class="jTP1">As one of the fastest growing companies, we in Sebratec 
+              are always looking for talents globaly.
+            </p>
+            <p class="jtP2"> <strong>150+</strong> experts already found their jobs with Sebratec</p>
+            <p class="jtP3"> <strong>127</strong> were realocated to Sweden</p>
+            <p class="jtP4"> <strong>94</strong> successful projects delivered </p>
+            <!-- mobile view design  -->
+            <div class="teamPoint">
+              <div class="points">
+                <h2>150+</h2>
+                <p>experts already found their jobs with Sebratec</p>
+              </div>
+              <div class="points">
+                <h2>127</h2>
+                <p>were realocated to Sweden</p>
+              </div>
+              <div class="points">
+                <h2>94</h2>
+                <p>successful projects delivered</p>
+              </div>
+            </div>
+            <div class="jtButns">
+              <button>POSITIONS</button>
+              <button>ACADEMY</button>
+            </div>
+          </div>
+          <div class="jointTeamAnimSection">
+            <div class="animImgs">
+              <img class="animImg1" src="./Assets/3el.png" alt="...">
+              <img class="animImg2" src="./Assets/1_element.png" alt="...">
+              <img class="animImg3" src="./Assets/6el.png" alt="...">
+              <img class="animImg4" id="img4" src="./Assets/7el.png" alt="...">
+              <img class="animImg5" id="img5" src="./Assets/4el.png" alt="...">
+              <img class="animImg6 showOnScroll" id="img6" src="./Assets/2_el.webp" alt="...">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+      <!-- blog section  -->
+      <div class="blogContainer" id="blog">
+        <div class="blogSection">
+          <div class="blogHead">
+            <h1>OUR BLOGS</h1>
+          </div>
+          <div class="blogCards">
+            <div class="cards">
+              <img src="./Assets/Sk-rmavbild-2021-04-.webp" alt="...">
+              <div class="cardBody">
+                <h3>About Green Initiative and Technology</h3>
+                <p>Visual communication takes place through pictures, graphs, and charts.</p>
+              </div>
+            </div>
+            <div class="cards">
+              <img src="./Assets/digitaalisuus-2-636-.webp" alt="...">
+              <div class="cardBody">
+                <h3>How Companies Can Implement and Use A.I. to Automate Their Processes</h3>
+                <p>Symbolization is an important definition for this perspective.</p>
+              </div>
+            </div>
+            <div class="cards">
+              <img src="./Assets/photo.jpg" alt="...">
+              <div class="cardBody">
+                <h3>How remote teams can help you grow at an accelerated pace</h3>
+                <p>The view of images in the critical perspective is when the viewers criticize the images.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R6Z74XDZ3E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      <!-- contact section  -->
+      <div class="contactContainer" id="contact">
+        <div class="contactSEction">
+          <div class="contactLeftSec">
+            <img src="./Assets/Renan Sebratec.jpg" alt="...">
+          </div>
+          <div class="contactRightForm">
+            <h1>LET'S MAKE IT REAL</h1>
+            <p>We are starving to know about your challenge!</p>
+            <form class="contactForm">
+              <label >
+                <input type="text" placeholder="YOUR EMAIL">
+              </label>
+              <label >
+                <input type="text" placeholder="YOUR FULL NAME">
+              </label>
+              <label >
+                <input type="text" placeholder="YOUR PHONE">
+              </label>
+              <button>Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
 
-  gtag('config', 'G-R6Z74XDZ3E');
-</script>
+      <!-- foooter  -->
+      <div class="footer">
+         <div class="footerCOntent">
+           <div class="cpRight">
+             <p>© 2027 Your company</p>
+           </div>
+           <div class="sLinks">
+             <a href="http://" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+           </div>
+           <div class="backToTop">
+             <a href="#">Back to top <i class="fas fa-long-arrow-alt-up"></i></a>
+           </div>
+         </div>
+      </div>
+    </div>
 
-<!-- Web Components -->
-<script src="components/header.js" type="text/javascript" defer></script>
-<script src="components/SchemaOrg.js" type="text/javascript" defer></script>
-
-<!-- SEO Metadata -->
-<link rel="canonical" href="https://sebratec.com" />
-<meta property="og:url" content="https://sebratec.com" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Sebratec – Software & Technology" />
-<meta property="og:description" content="Sebratec is an I.T. service company. We are specialized in tailored software solutions, consultancy and technology training programs." />
-<meta property="og:image" content="https://sebratec.com/assets/img/logo/SebratecLogo.png" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Sebratec – Software & Technology" />
-<meta name="twitter:description" content="Sebratec is an I.T. service company. We are specialized in tailored software solutions, consultancy and technology training programs." />
-<meta name="twitter:image" content="https://sebratec.com/assets/img/logo/SebratecLogo.png" />
-</head>
-
-<body class="one-page header-absolute">
-<schema-org-component></schema-org-component>
-
-<!-- Loader -->
-<div id="page-loader"><svg class="loader-1 loader-primary" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="circle" fill="none" stroke-width="3" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div>
-<!-- Loader / End -->
-
-<!-- Header -->
-<header id="header" class="absolute fullwidth light">
-	<header-component language="en" pageUrl="index"></header-component>
-</header>
-<!-- Header / End -->
-
-<!-- Content -->
-<div id="content">
-
-	<!-- Section / Slideshow -->
-	<section id="home" class="fullheight dark bg-black">
-
-		<div class="bg-image zooming">
-			<picture>
-				<source srcset="assets/img/backgrounds/opt3v3.webp" type="image/webp">
-				<source srcset="assets/img/backgrounds/opt3v3.jpg" type="image/jpeg"> 
-				<img src="assets/img/backgrounds/opt3v3.jpg" alt="Computer with programming codes">
-			</picture>
-		</div>
-
-		<div class="v-center text-center">
-			<h2 class="font-secondary"><span class="typing">Your partner for Software & AI Solutions</span></h2>
-			<p style="font-size: 18px">We provide consultancy, training programs and software solutions tailored for your needs.</p>
-			<br><br>
-			<span data-target="local-scroll"><a href="contact.html" class="btn btn-default">Contact Us <i class="i-after ti-arrow-right"></i></a></span>
-		</div>
-
-	</section>
-	
-	<!-- Section / Services -->
-	<section id="services" class="bg-grey">
-		<div class="container">
-			<h5 class="mb-60">Our Services</h5>
-			
-			<div class="ServiceFrame">
-				<div class="holder">
-					<img src="assets/img/icons/services/AI.png" alt="Sebratec Service" class="icon">
-					<p class="ServiceTitle">
-						Artificial Intelligence
-					</p>
-				</div>
-				
-				<div class="holder">
-					<img src="assets/img/icons/services/mobile.png" alt="Sebratec Service" class="icon">
-					<p class="ServiceTitle">
-						Mobile
-					</p>
-				</div>
-			
-				<div class="holder">
-					<img src="assets/img/icons/services/cloud.png" alt="Sebratec Service" class="icon">
-					<p class="ServiceTitle">
-						Cloud
-					</p>
-				</div>
-			
-				<div class="holder">
-					<img src="assets/img/icons/services/software.png" alt="Sebratec Service" class="icon">
-					<p class="ServiceTitle">
-						Software Architecture
-					</p>
-				</div>
-				
-				<div class="holder">
-					<img src="assets/img/icons/services/embedded.png" alt="Sebratec Service" class="icon">
-					<p class="ServiceTitle">
-						Embedded Systems
-					</p>
-				</div>
-
-				<div class="holder">
-					<img src="assets/img/icons/services/integration-v2.png" alt="Sebratec Service" class="icon">
-					<p class="ServiceTitle">
-						Integration
-					</p>
-				</div>
-
-				<div class="holder">
-					<img src="assets/img/icons/services/validation.png" alt="Sebratec Service" class="icon">
-					<p class="ServiceTitle">
-						Test & Validation
-					</p>
-				</div>
-
-				<div class="holder">
-					<img src="assets/img/icons/services/ui-ux.png" alt="Sebratec Service" class="icon">
-					<p class="ServiceTitle">
-						UI & UX Design
-					</p>
-				</div>
-			</div>
-
-			<div class="row cta-frame">
-				<div class="col-md-4 col-md-push-4 col-sm-6 col-sm-push-3">
-					<p class="before-cta">Are you interested in any of these services?</p>
-					<a href="contact.html" class="btn btn-filled btn-primary btn-block">Get in touch</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Section / About -->
-	<section id="about" class="section-double fullheight bg-primary dark right">
-		<div class="content col-md-6">
-			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active fade in" id="about_tab">
-					<h2>Sebratec is a tech company with branches in Sweden and Brazil.<br></h2>
-					<p class="lead mb-50">Sebratec is an I.T. service company. We are specialized in tailored software solutions, consultancy and technology training programs</p>
-					<span data-target="local-scroll"><a href="about-sebratec.html" class="btn btn-default">Read more <i class="i-after ti-arrow-right"></i></a></span>
-				</div>
-			</div>
-		</div>
-		<div class="image col-md-6">
-			<div class="bg-image zooming"><img src="assets/img/photos/sebrarobot.jpg" alt="Robot"></div>
-		</div>
-	</section>
-
-	<!-- Section / Customers -->
-	<section id="customers" class="bg-grey">
-		<div class="container">
-			<h5 class="mb-60">Our Partners</h5>
-			<br>
-			<div class="col-lg-12 col-md-12">
-				<div class="row carousel" data-items="4" data-pagination="true" data-navigation="false">
-					<div class="col-xs-12">
-					<a href=""><img class="gray-to-color" src="assets/img/logotypes/wirelesscar.png" alt="WirelessC"></a>
-					</div>
-					
-					<div class="col-xs-12">
-					<a href=""><img class="gray-to-color" src="assets/img/logotypes/Nevs_logo.png" alt="NEVS"></a>
-					</div>
-					
-					<div class="col-xs-12">
-					<a href=""><img class="gray-to-color" src="assets/img/logotypes/Volvocars_logo.png" alt="Volvo Cars"></a>
-					</div>
-
-					<div class="col-xs-12">
-					<a href=""><img class="gray-to-color" src="assets/img/logotypes/skf.png" alt="S K F"></a>
-					</div>
-					
-					<div class="col-xs-12">
-					<a href=""><img class="gray-to-color" src="assets/img/logotypes/svp-worldwide.png" alt="SVP Worldwide"></a>
-					</div>
-
-					<div class="col-xs-12">
-					<a href=""><img class="gray-to-color" src="assets/img/logotypes/cevt.png" alt="CEVT"></a>
-					</div>
-					
-					<div class="col-xs-12">
-					<a href=""><img class="gray-to-color" src="assets/img/logotypes/drdry.png" alt="DrDry"></a>
-					</div>
-
-					<div class="col-xs-12">
-					<a href=""><img class="gray-to-color" src="assets/img/logotypes/Volvogroup_logo.png" alt="Volvo Group"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="careers" class="bg-grey">
-		<div class="row text-center">
-			<div class="col-lg-8 col-lg-push-2">
-				<h3>Would you like to join our team? Check our current openings!</h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4 col-md-push-4 col-sm-6 col-sm-push-3">
-				<a href="https://sebratec-ab.breezy.hr/" target="_blank" rel="noreferrer" class="btn btn-filled btn-primary btn-block">Go to Careers <i class="i-after ti-arrow-right"></i></a>
-			</div>
-		</div>
-	</section>
-
-<!-- Footer 2-->
-<footer>
-	<div class="wrapper">
-		<img src="assets/img/favicon1_76x76.png" alt="Sebratec Symbol" class="symbol">
-		<p id="credits">
-			© 2021. All Rights Reserved.
-		</p>
-
-		<div class="SocialWrapper">
-			<a href="https://www.linkedin.com/company/sebratec/" target="_blank" rel="noopener noreferrer">
-				<svg viewBox="0 0 24 24">
-					<path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
-				</svg>
-			</a>
-
-			<a href="https://instagram.com/sebratec" target="_blank" rel="noopener noreferrer">
-				<svg viewBox="0 0 24 24">
-					<path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
-				</svg>
-			</a>
-
-			<a href="https://www.facebook.com/SebratecConsultancy" target="_blank" rel="noopener noreferrer">
-				<svg viewBox="0 0 24 24">
-					<path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
-				</svg>
-			</a>
-		</div>
-	</div>
-</footer>
-<!-- Footer2 / End -->
-
-<!-- JS Libraries -->
-<script src="assets/js/jquery-1.12.3.min.js"></script>
-
-<!-- JS Plugins -->
-<script src="assets/js/plugins.js"></script>
-
-<!-- JS Core -->
-<script src="assets/js/core.js"></script>
-<script src="assets/js/extras.js"></script>
-
-</body>
-
+    <!-- swiper js  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- initialize swiper  -->
+    <script>
+      // const swiper = new Swiper('.swiper', {
+      //   direction: 'horizontal',
+      //   loop: false,
+      //   slidesPerView: 4,
+      //   spaceBetween: 50,
+      //   // Navigation arrows
+      //   navigation: {
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev',
+      //   },
+      // })
+      var swiper = new Swiper(".swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+                slidesPerView: 4,
+        spaceBetween: 50,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          400: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        },
+      });
+    </script>
+    <!-- animatio on scroll  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    <script src="./app.js"></script>
+  </body>
 </html>
