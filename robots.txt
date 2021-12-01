@@ -1,6 +1,0 @@
-user-agent: *
-
-Disallow:
-Allow: 
-
-Sitemap: https://sebratec.com/sitemaps.xml
