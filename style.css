@@ -764,13 +764,15 @@ button:hover {
 }
 .blogCards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 40px;
+  
 }
 
 .cards {
   width: 370px;
   background-color: white;
+  margin-inline: 50px;
 }
 .cards img {
   width: 100%;
